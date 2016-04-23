@@ -1,0 +1,43 @@
+html {
+  font-size: 100%;
+  line-height: 1.4;
+  font-family: HKGroteskLight;
+  color: #DCDCD1; }
+  @media all and (min-width: 600px) {
+    html {
+      font-size: 112.5%; } }
+  @media all and (min-width: 1200px) {
+    html {
+      font-size: 125%; } }
+
+body {
+  max-width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #3F61EA; }
+  body:after {
+    content: " ";
+    display: block;
+    clear: both; }
+  @media all and (max-width: 37.4375em) {
+    body {
+      max-width: 80%;
+      margin-left: auto;
+      margin-right: auto; }
+      body:after {
+        content: " ";
+        display: block;
+        clear: both; } }
+
+h1 {
+  color: #DCDCD1;
+  font-family: HKGroteskRegular; }
+
+.main {
+  margin-top: 50px; }
+  .main a {
+    color: white;
+    padding: 10px; }
+
+#highl {
+  color: white; }
