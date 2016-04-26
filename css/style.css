@@ -3,7 +3,10 @@ html {
   line-height: 1.4;
   font-family: HKGroteskLight;
   color: #DCDCD1; }
-  @media all and (min-width: 600px) {
+  @media all and (min-width: 500px) {
+    html {
+      font-size: 100%; } }
+  @media all and (min-width: 670px) {
     html {
       font-size: 112.5%; } }
   @media all and (min-width: 1200px) {
@@ -19,7 +22,7 @@ body {
     content: " ";
     display: block;
     clear: both; }
-  @media all and (max-width: 37.4375em) {
+  @media all and (max-width: 31.1875em) {
     body {
       max-width: 80%;
       margin-left: auto;
@@ -29,15 +32,68 @@ body {
         display: block;
         clear: both; } }
 
+::-moz-selection {
+  background-color: white; }
+
+::selection {
+  background-color: white; }
+
 h1 {
   color: #DCDCD1;
   font-family: HKGroteskRegular; }
+
+#link {
+  color: #DCDCD1; }
+
+#link:hover {
+  color: white;
+  font-family: HKGroteskRegular; }
+
+.nav a {
+  color: #DCDCD1; }
+
+.nav a:hover {
+  color: white;
+  font-family: HKGroteskRegular; }
+
+.nav ul {
+  padding: 0px; }
+
+.nav li {
+  list-style-type: none;
+  padding-top: 20px;
+  padding-left: 30px;
+  display: inline-block; }
+
+.nav li:first-child {
+  padding-left: 0px; }
+
+.nav li:last-child {
+  float: right; }
 
 .main {
   margin-top: 50px; }
   .main a {
     color: white;
     padding: 10px; }
+
+.weeks a {
+  color: #DCDCD1;
+  font-size: 0.875rem;
+  line-height: 2; }
+  @media all and (min-width: 500px) {
+    .weeks a {
+      font-size: 1.125rem; } }
+  @media all and (min-width: 670px) {
+    .weeks a {
+      font-size: 1.27778rem; } }
+  @media all and (min-width: 1200px) {
+    .weeks a {
+      font-size: 1.6rem; } }
+
+.weeks a:hover {
+  color: white;
+  font-family: HKGroteskRegular; }
 
 #highl {
   color: white; }
