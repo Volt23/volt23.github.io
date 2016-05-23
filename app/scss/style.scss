@@ -1,0 +1,87 @@
+@import "../bower_components/mappy-breakpoints/mappy-breakpoints";
+@import "../bower_components/susy/sass/susy";
+@import "../bower_components/typi/scss/typi";
+
+$susy: (
+  columns: 12,
+  gutters: 1/4,
+  math: fluid,
+  output: float,
+  gutter-position: inside,
+);
+
+
+$breakpoints: (
+  small: 800px,
+  large: 1200px
+);
+
+$typi: (
+  null: (16px, 1.4),
+  small: 18px,
+  large: 20px
+);
+
+// fonts //////////////
+$light:'HKGroteskLight'; 
+$reg:'HKGroteskRegular'; 
+$bold:'HKGroteskBold'; 
+///////////////////////
+
+// colors //////////////
+$primary:#3f61ea; //blue
+$primary2:white; //white
+$second:#dcdcd1; //light gray
+$third:#657980; //dark gray
+///////////////////////
+
+// general //////////////
+html {
+  @include typi-base();
+  @include container(80%);
+  font-family:$light;
+}
+//////////////////////////
+
+// home /////////////////
+body#index{
+	background-color: $primary;
+  	color: $primary2;
+}
+////////////////////////
+
+// navigation /////////////
+.nav{
+	list-style-type: none;
+	padding:0;
+	margin-top: 40px;
+	margin-bottom:30px;
+	li{
+	display: inline-block;
+	padding-right: 6%;}
+	li:last-of-type{
+		float:right;
+		padding:0;
+	}
+	a{
+		color:$second;
+	}
+	a:hover{
+		color:$primary2;
+	}
+}
+//////////////////////////
+
+// week list homepage ////////////
+.weeks{
+	list-style-type: none;
+	padding:0;
+	li{
+		padding: 10px;
+		margin: 10px;
+		margin-left: 0px;
+		background-color: $primary2;
+		color: $primary;
+	}
+}
+/////////////////////////////////
