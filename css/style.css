@@ -79,6 +79,18 @@ body#index {
   background-color: #3f61ea;
   color: white; }
 
+a {
+  color: white;
+  text-decoration: none; }
+
+a:visited {
+  color: #dcdcd1;
+  text-decoration: line-through; }
+
+a:hover {
+  color: white;
+  text-decoration: underline; }
+
 body#week {
   background-color: white;
   color: #3f61ea; }

@@ -34,6 +34,9 @@ $primary2:white; //white
 $second:#dcdcd1; //light gray
 $third:#657980; //dark gray
 ///////////////////////
+
+
+// Layout large (more than 1000px)/////////
 @include mappy-bp(large) {
 	.nav{@include span(10)
 		margin-left:span(1);}
@@ -59,6 +62,8 @@ $third:#657980; //dark gray
 		@include span(2);
 	}
 	}}
+/////////////////////////
+
 // general //////////////
 html {
   @include typi-base();
@@ -72,6 +77,16 @@ body#index{
 	background-color: $primary;
   	color: $primary2;
 }
+	///links
+	a{color: $primary2;
+	text-decoration: none;}
+
+	a:visited{color: $second;
+	text-decoration: line-through;
+	}
+
+	a:hover{color: $primary2;
+	text-decoration: underline;}
 ////////////////////////
 
 // week /////////////////
