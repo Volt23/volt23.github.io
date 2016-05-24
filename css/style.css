@@ -101,6 +101,17 @@ body#week a {
 body#week .placeholder {
   background-color: #3f61ea; }
 
+.weeks {
+  list-style-type: none;
+  padding: 0; }
+
+.weeks li {
+  padding: 10px 0px 3px 0px;
+  margin: 10px;
+  margin-left: 0px;
+  color: white;
+  border-top: 1px solid; }
+
 .nav {
   list-style-type: none;
   margin-top: 40px;
@@ -119,16 +130,6 @@ body#week .placeholder {
   color: #dcdcd1; }
 
 .nav a:hover {
-  color: white; }
-
-.weeks {
-  list-style-type: none;
-  padding: 0; }
-
-.weeks li {
-  padding: 10px;
-  margin: 10px;
-  margin-left: 0px;
   color: white; }
 
 .placeholder {

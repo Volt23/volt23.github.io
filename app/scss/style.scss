@@ -100,6 +100,20 @@ body#week{
   		background-color:$primary;
   	}
 }
+
+// week list homepage ////////////
+.weeks{
+	list-style-type: none;
+	padding:0;
+	li{
+		padding: 10px 0px 3px 0px;
+		margin: 10px;
+		margin-left: 0px;
+		color: $primary2;
+		border-top: 1px solid;
+
+	}
+}
 ////////////////////////
 
 
@@ -125,18 +139,6 @@ body#week{
 }
 //////////////////////////
 
-// week list homepage ////////////
-.weeks{
-	list-style-type: none;
-	padding:0;
-	li{
-		padding: 10px;
-		margin: 10px;
-		margin-left: 0px;
-		color: $primary2;
-	}
-}
-/////////////////////////////////
 
 .placeholder{
 	background-color:$primary2;
