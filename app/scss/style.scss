@@ -13,7 +13,7 @@ $susy: (
 
 $breakpoints: (
   small: 800px,
-  large: 1200px
+  large: 1000px
 );
 
 $typi: (
@@ -34,7 +34,31 @@ $primary2:white; //white
 $second:#dcdcd1; //light gray
 $third:#657980; //dark gray
 ///////////////////////
-
+@include mappy-bp(large) {
+	.nav{@include span(10)
+		margin-left:span(1);}
+	.header,.footer,.content{
+	@include break;
+	@include span(10);
+	margin-left: span(1);}
+	.chapters{
+		@include break;
+	.titolo{@include span(2);
+		margin-left:span(-1);
+		text-align: right;
+		margin-top: 0px;
+		padding-right:2.5%;
+}
+	.testo{
+		@include span(10 wide);
+		margin-left:-gutters;
+		p{margin:0;
+		padding:0;}
+		margin-bottom: 40px;}
+	.spias{
+		@include span(2);
+	}
+	}}
 // general //////////////
 html {
   @include typi-base();
@@ -50,12 +74,26 @@ body#index{
 }
 ////////////////////////
 
+// week /////////////////
+body#week{
+	background-color: $primary2;
+  	color: $primary;
+  	a{
+  		color:$primary;
+  	}
+  	.placeholder{
+  		background-color:$primary;
+  	}
+}
+////////////////////////
+
+
 // navigation /////////////
 .nav{
 	list-style-type: none;
-	padding:0;
 	margin-top: 40px;
 	margin-bottom:30px;
+	padding:0;
 	li{
 	display: inline-block;
 	padding-right: 6%;}
@@ -80,8 +118,17 @@ body#index{
 		padding: 10px;
 		margin: 10px;
 		margin-left: 0px;
-		background-color: $primary2;
-		color: $primary;
+		color: $primary2;
 	}
 }
 /////////////////////////////////
+
+.placeholder{
+	background-color:$primary2;
+	width:100%;
+	height:30vh;
+}
+
+.footer{
+	height:300px;
+}

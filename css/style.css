@@ -1,3 +1,59 @@
+@media all and (min-width: 62.5em) {
+  .nav {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 83.33333%;
+    float: left;
+    padding-left: 0.83333%;
+    padding-right: 0.83333%;
+    margin-left: 8.33333%; }
+  .header, .footer, .content {
+    clear: both;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 83.33333%;
+    float: left;
+    padding-left: 0.83333%;
+    padding-right: 0.83333%;
+    margin-left: 8.33333%; }
+  .chapters {
+    clear: both; }
+  .chapters .titolo {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 16.66667%;
+    float: left;
+    padding-left: 0.83333%;
+    padding-right: 0.83333%;
+    margin-left: -8.33333%;
+    text-align: right;
+    margin-top: 0px;
+    padding-right: 2.5%; }
+  .chapters .testo {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 83.33333%;
+    float: left;
+    padding-left: 0.83333%;
+    padding-right: 0.83333%;
+    margin-left: -gutters;
+    margin-bottom: 40px; }
+  .chapters .testo p {
+    margin: 0;
+    padding: 0; }
+  .chapters .spias {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 16.66667%;
+    float: left;
+    padding-left: 0.83333%;
+    padding-right: 0.83333%; } }
+
 html {
   font-size: 100%;
   line-height: 1.4;
@@ -10,7 +66,7 @@ html {
   html {
     font-size: 112.5%; } }
 
-@media all and (min-width: 1200px) {
+@media all and (min-width: 1000px) {
   html {
     font-size: 125%; } }
 
@@ -23,11 +79,21 @@ body#index {
   background-color: #3f61ea;
   color: white; }
 
+body#week {
+  background-color: white;
+  color: #3f61ea; }
+
+body#week a {
+  color: #3f61ea; }
+
+body#week .placeholder {
+  background-color: #3f61ea; }
+
 .nav {
   list-style-type: none;
-  padding: 0;
   margin-top: 40px;
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  padding: 0; }
 
 .nav li {
   display: inline-block;
@@ -51,5 +117,12 @@ body#index {
   padding: 10px;
   margin: 10px;
   margin-left: 0px;
+  color: white; }
+
+.placeholder {
   background-color: white;
-  color: #3f61ea; }
+  width: 100%;
+  height: 30vh; }
+
+.footer {
+  height: 300px; }
