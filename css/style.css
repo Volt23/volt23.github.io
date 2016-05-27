@@ -32,7 +32,7 @@
     text-align: right;
     margin-top: 0px;
     padding-right: 2.5%; }
-  .chapters .testo {
+  .testo {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -42,10 +42,10 @@
     padding-right: 0.83333%;
     margin-left: -gutters;
     margin-bottom: 40px; }
-  .chapters .testo p {
+  .testo p {
     margin: 0;
     padding: 0; }
-  .chapters .spias {
+  .spias {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -64,11 +64,13 @@ html {
 
 @media all and (min-width: 800px) {
   html {
-    font-size: 112.5%; } }
+    font-size: 112.5%;
+    line-height: 1.4; } }
 
 @media all and (min-width: 1000px) {
   html {
-    font-size: 125%; } }
+    font-size: 125%;
+    line-height: 1.4; } }
 
 html:after {
   content: " ";
@@ -101,6 +103,23 @@ body#week a {
 body#week .placeholder {
   background-color: #3f61ea; }
 
+.header {
+  border-bottom: 1px solid;
+  margin-bottom: 30px; }
+
+.header p {
+  font-size: 1rem;
+  line-height: 1.4;
+  margin-bottom: 30px; }
+
+@media all and (min-width: 800px) {
+  .header p {
+    font-size: 1.11111rem; } }
+
+@media all and (min-width: 1000px) {
+  .header p {
+    font-size: 1.15rem; } }
+
 .weeks {
   list-style-type: none;
   padding: 0; }
@@ -113,16 +132,13 @@ body#week .placeholder {
   border-top: 1px solid; }
 
 .nav {
-  list-style-type: none;
-  margin-top: 40px;
   margin-bottom: 30px;
   padding: 0; }
 
 .nav li {
-  display: inline-block;
   padding-right: 6%; }
 
-.nav li:last-of-type {
+.nav .right {
   float: right;
   padding: 0; }
 
@@ -131,6 +147,88 @@ body#week .placeholder {
 
 .nav a:hover {
   color: white; }
+
+.sub-menu-parent {
+  position: relative; }
+
+.sub-menu {
+  visibility: hidden;
+  /* hides sub-menu */
+  opacity: 0;
+  position: absolute;
+  top: 100%;
+  left: -40%;
+  width: 150%;
+  transform: translateZ(0);
+  transform: translateY(10%);
+  transition: all 0.5s ease 0s, visibility 0s linear 0.5s;
+  /* the last value is the transition-delay for visibility */ }
+
+.sub-menu-parent:hover .sub-menu {
+  visibility: visible;
+  /* shows sub-menu */
+  opacity: 1;
+  transform: translateX(0%);
+  transition-delay: 0s;
+  /* this removes the transition delay so the menu will be visible while the other styles transition */ }
+
+/* presentational */
+nav a {
+  display: block;
+  padding: 5px 10px; }
+
+nav a:hover {
+  color: white; }
+
+nav ul,
+nav ul li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0; }
+
+nav > ul {
+  text-align: left; }
+
+nav > ul > li {
+  display: inline-block; }
+
+nav > ul > li:first-child {
+  border-left: none; }
+
+.sub-menu {
+  background: white; }
+
+.sub-menu a {
+  color: #3f61ea;
+  text-align: center;
+  font-size: 15px;
+  padding: 8px;
+  border-bottom: 1px solid #3f61ea; }
+
+.sub-menu a:hover {
+  color: #3f61ea;
+  font-weight: bold;
+  text-decoration: line-through; }
+
+.imm {
+  clear: both;
+  width: 100%;
+  margin-top: 32px; }
+
+.didasc {
+  font-size: 0.8125rem;
+  line-height: 1.4;
+  font-style: italic;
+  float: right;
+  text-align: right; }
+
+@media all and (min-width: 800px) {
+  .didasc {
+    font-size: 0.83333rem; } }
+
+@media all and (min-width: 1000px) {
+  .didasc {
+    font-size: 0.9rem; } }
 
 .placeholder {
   background-color: white;

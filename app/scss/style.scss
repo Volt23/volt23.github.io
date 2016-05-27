@@ -18,9 +18,21 @@ $breakpoints: (
 
 $typi: (
   null: (16px, 1.4),
-  small: 18px,
-  large: 20px
+  small: (18px,1.4),
+  large: (20px,1.4)
 );
+
+$intro-map: (
+  null: (16px, 1.4),
+  small: 20px,
+  large: 23px
+  );
+
+$didasc: (
+  null: (13px, 1.4),
+  small: 15px,
+  large: 18px
+  );
 
 // fonts //////////////
 $light:'HKGroteskLight'; 
@@ -52,16 +64,18 @@ $third:#657980; //dark gray
 		margin-top: 0px;
 		padding-right:2.5%;
 }
+}
 	.testo{
-		@include span(10 wide);
+		@include span(10);
 		margin-left:-gutters;
 		p{margin:0;
 		padding:0;}
-		margin-bottom: 40px;}
+		margin-bottom: 40px;
+	}
 	.spias{
 		@include span(2);
 	}
-	}}
+	}
 /////////////////////////
 
 // general //////////////
@@ -101,6 +115,13 @@ body#week{
   	}
 }
 
+.header{
+	border-bottom: 1px solid;
+	margin-bottom: 30px;
+	p{
+	@include typi($intro-map);
+	margin-bottom: 30px;}
+}
 // week list homepage ////////////
 .weeks{
 	list-style-type: none;
@@ -118,15 +139,12 @@ body#week{
 
 
 // navigation /////////////
-.nav{
-	list-style-type: none;
-	margin-top: 40px;
+.nav {
 	margin-bottom:30px;
 	padding:0;
 	li{
-	display: inline-block;
 	padding-right: 6%;}
-	li:last-of-type{
+	.right{
 		float:right;
 		padding:0;
 	}
@@ -137,8 +155,65 @@ body#week{
 		color:$primary2;
 	}
 }
+
+
+
+	//////// sub-menu
+    .sub-menu-parent { position: relative; }
+  
+    .sub-menu {
+      visibility: hidden; /* hides sub-menu */
+      opacity: 0;
+      position: absolute;
+      top: 100%;
+      left: -40%;
+      width: 150%;
+      transform: translateZ(0);
+      transform: translateY(10%);
+      transition: all 0.5s ease 0s, visibility 0s linear 0.5s; /* the last value is the transition-delay for visibility */
+    }
+
+    .sub-menu-parent:hover .sub-menu {
+      visibility: visible; /* shows sub-menu */
+      opacity: 1;
+      transform: translateX(0%);
+      transition-delay: 0s; /* this removes the transition delay so the menu will be visible while the other styles transition */
+    }
+
+/* presentational */
+
+nav a {display: block; padding: 5px 10px}
+nav a:hover { color: $primary2; }
+nav ul,
+nav ul li { list-style-type: none; padding: 0; margin: 0; }
+
+nav > ul { text-align: left; }
+nav > ul > li { display: inline-block}
+nav > ul > li:first-child { border-left: none; }
+
+.sub-menu {
+	a{color: $primary;
+		text-align: center;
+		font-size: 15px;
+		padding:8px;
+		border-bottom:1px solid $primary}
+	a:hover{color:$primary;
+		font-weight:bold;
+		text-decoration: line-through;}
+  background: $primary2;
+}
 //////////////////////////
 
+.imm{
+	@include break;
+	width:100%;
+	margin-top:32px;
+}
+.didasc{
+	@include typi($didasc)
+	font-style: italic;
+	float:right;
+	text-align:right;}
 
 .placeholder{
 	background-color:$primary2;

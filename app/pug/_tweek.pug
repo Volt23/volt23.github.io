@@ -1,11 +1,17 @@
-mixin paragraph(titolo)
+mixin paragraph(titolo,testo)
 	h3.titolo= titolo
 	.testo
-		if block
+		p=testo
 			block
-		else
-			p No content provided
 	.spias
+
+mixin intro(testo)
+	p=testo
+
+mixin imm(src,didasc)
+	//- attributes == {class: "btn"}
+	img.imm(src=src)
+	.didasc=didasc
 
 doctype html
 html(lang="en")
@@ -14,8 +20,7 @@ html(lang="en")
 		include _nav.pug
 		.header
 			block Title
-			p Intro I'm a graphic designer, newbie screenprinter and wannabe interaction designer."The medium is the message" — as McLuhan said — and I want explore the possibilities offered by media and technology today, this is why i'm attending the fab academy at Opendot.
-			br
+			+intro('sucasucafirtefirte')
 		.chapters
 			block chapter
 				+paragraph('Hello world')
