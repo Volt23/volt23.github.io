@@ -6,7 +6,7 @@ mixin paragraph(titolo,testo)
 	.spias
 
 mixin intro(testo)
-	p=testo
+	p.intro=testo
 
 mixin imm(src,didasc)
 	//- attributes == {class: "btn"}
@@ -20,7 +20,6 @@ html(lang="en")
 		include _nav.pug
 		.header
 			block Title
-			+intro('sucasucafirtefirte')
 		.chapters
 			block chapter
 				+paragraph('Hello world')

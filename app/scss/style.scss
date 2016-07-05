@@ -51,7 +51,8 @@ $third:#657980; //dark gray
 // Layout large (more than 1000px)/////////
 @include mappy-bp(large) {
 	.nav{@include span(10)
-		margin-left:span(1);}
+		margin-left:span(1)+1%;
+		.sub-menu{padding-left:10px;}}
 	.header,.footer,.content{
 	@include break;
 	@include span(10);
@@ -107,8 +108,13 @@ body#index{
 body#week{
 	background-color: $primary2;
   	color: $primary;
+  	.nav a{
+  		color: $primary;
+  	}
+
   	a{
-  		color:$primary;
+  		color:$third;
+  		font-weight: bold;
   	}
   	.placeholder{
   		background-color:$primary;
@@ -154,8 +160,6 @@ body#week{
 	a:hover{
 		color:$primary2;
 	}
-}
-
 
 
 	//////// sub-menu
@@ -166,8 +170,8 @@ body#week{
       opacity: 0;
       position: absolute;
       top: 100%;
-      left: -40%;
-      width: 150%;
+      left: -65%;
+      width: 180%;
       transform: translateZ(0);
       transform: translateY(10%);
       transition: all 0.5s ease 0s, visibility 0s linear 0.5s; /* the last value is the transition-delay for visibility */
@@ -179,10 +183,10 @@ body#week{
       transform: translateX(0%);
       transition-delay: 0s; /* this removes the transition delay so the menu will be visible while the other styles transition */
     }
-
+}
 /* presentational */
 
-nav a {display: block; padding: 5px 10px}
+nav a {display: block; padding: 20px 10px 10px 0px;}
 nav a:hover { color: $primary2; }
 nav ul,
 nav ul li { list-style-type: none; padding: 0; margin: 0; }
@@ -192,14 +196,21 @@ nav > ul > li { display: inline-block}
 nav > ul > li:first-child { border-left: none; }
 
 .sub-menu {
-	a{color: $primary;
+			font-size: 14px;
+	a{
+		color: $primary;
+		margin-left:10px;
 		text-align: center;
-		font-size: 15px;
-		padding:8px;
+		padding:10px;
 		border-bottom:1px solid $primary}
 	a:hover{color:$primary;
 		font-weight:bold;
-		text-decoration: line-through;}
+		text-decoration: line-through;
+	}
+
+	.num{text-align:left;
+		color:$primary;}
+
   background: $primary2;
 }
 //////////////////////////
@@ -207,13 +218,18 @@ nav > ul > li:first-child { border-left: none; }
 .imm{
 	@include break;
 	width:100%;
-	margin-top:32px;
+	margin-top:10px;
+	padding-bottom:20px;
 }
 .didasc{
+	@include break;
 	@include typi($didasc)
 	font-style: italic;
+	display:block;
 	float:right;
-	text-align:right;}
+	text-align:right;
+	margin-top:-30px;
+}
 
 .placeholder{
 	background-color:$primary2;
@@ -224,3 +240,16 @@ nav > ul > li:first-child { border-left: none; }
 .footer{
 	height:300px;
 }
+
+.titolo{
+	margin-top:50px;
+}
+
+.intro{
+	margin-top:-15px;
+}
+
+.barrato{
+	text-decoration:line-through;
+}
+

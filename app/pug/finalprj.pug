@@ -2,8 +2,90 @@ extends ./_tweek.pug
 
 block Title
 	h1 Fabbable Exposure Unit
+	+intro('Replicable exposure unit with timer, vacuum pump and light sensors')
 
 block chapter
-	+paragraph('figofigo','tutto molto figo')
-		+imm("media/finalprj/structure.jpg","stocazzo")
+	+paragraph('Intro')
+		p In the next weeks I'm going to build an exposure unit. It's a device used to make the cliché for screen printing, a <a href="https://en.wikipedia.org/wiki/Screen_printing" target="_blank">ink transfer printing technique</a>. Long story short it's used to expose to light a screenprint frame coated with a photosensitive emulsion: the light make this emulsion hard, corking the cloth on the frame. <br> In order to get a graphic on the frame a transparent film – with the graphic printed in black – is placed between the light and the coated frame: the emulsion won't harden in these shaded points and will be washable. The ink will go through the cloth thanks to the pressure of a squeegee, just opposite of what happens where the emulsion has become hard.
 
+	+paragraph('The project')
+		p What I would achieve is an exposure unit that:
+			ol
+				li <b>Burns well the frame</b>
+					ul
+						li vacuum system integrated 
+						li Fluorescent attinic tubes (good for some kind of emulsions) 10x18watt
+				br
+				li <b> Gives you useful data</b>
+					ul
+						li Light emitted
+						li Light's wavelength
+						li Temperature and umidity
+						li pressure of the vacuum
+				br
+				li <b> Automates some processes and stores data</b>
+					ul 
+						li timer
+						li Save time presets
+						li Store the data of (lux, time, wavelength) of each exposure
+						li time integration based on the light emitted (<a href="https://printwearmag.com/features/get-most-your-exposure-unit" target="_blank">more info</a>)
+						li automatically activate the compressor for the vacuum, turn on the light and keep the vacuum until the end of the timer.
+				br
+				li <b>Have a dedicated space for the frame storage and dry</b>
+	+paragraph('Parts and systems')
+		p I've divided in 9 parts the project, helping me to develop each one in parallel and integrate it if the testing gave good results
+
+		ol 
+			li The main structure
+			li The illumination
+			li The timer
+			li The vacuum system
+			li Sensors
+			li Interface on computer
+			li Interface on the unit
+			li Dryer and storage
+			li Timer integration based on lux emitted
+
+	+paragraph('First prototype, 20th june')
+		+imm('media/finalprj/structure.jpg','First prototype of the structure')
+		ol 
+			li The main structure (beta)
+			li The illumination
+			li The timer
+			li.barrato The vacuum system
+			li Sensors
+				ul 
+					li Temperature & Umidity
+					li Lux emitted & Wavelength
+					li.barrato pressure sensor
+			li Interface on computer
+			li.barrato Interface on the unit
+			li.barrato Dryer and storage
+			li.barrato Timer integration based on lux emitted
+
+	+paragraph('Components')
+		ul
+			li  Structure (beta)
+				br 
+				| wooden box (18mm thick) 71x91x20
+			br
+			li Illumination
+				ul 
+					li: a(href="storie") Lamps x10
+					li: a(href="storie") Ballasts x5
+					li: a(href="storie") Starters x10
+			br
+			li Timer
+				ul
+					li: a(href="storie") Satshakit
+			br
+			li Sensors
+				ul
+					li: a(href="storie") Light sensors
+						ul
+							li: a(href="http://www.sparkfun.com/datasheets/Sensors/Imaging/TSL235R-LF.pdf") TSL235r
+							li: a(href="") 
+							li: a(href="") 
+					li: a(href="storie") Pressure sensor
+					li: a(href="storie") Temperature sensor
+					li: a(href="storie") Umidity sensor
