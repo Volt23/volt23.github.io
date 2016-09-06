@@ -8,30 +8,129 @@
   <body id="week">
     <nav class="nav">
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li class="sub-menu-parent"> <a href="#">Weeks</a>
-          <ul class="sub-menu">
-            <li> <a class="voce" href="#">Principles and Project Management</a></li>
-            <li> <a class="voce" href="#">Principles and Project Management</a></li>
-            <li> <a class="voce" href="#">Principles and Project Management</a></li>
-            <li> <a class="voce" href="#">Principles and Project Management</a></li>
-            <li> <a class="voce" href="#">Principles and Project Management</a></li>
-            <li> <a class="voce" href="#">Principles and Project Management</a></li>
-            <li> <a class="voce" href="#">Principles and Project Management</a></li>
-          </ul>
-        </li>
-        <li class="right"> <a href="finalprj.html">Final prj</a></li>
+        <li><a href="curriculum.pdf" download>CV</a></li>
+        <li class="sub-menu-parent"> <a href="portfolio.pdf" download>Portfolio</a></li>
       </ul>
     </nav>
     <div class="header">
       <h1>Fabbable Exposure Unit</h1>
-      <p>sucasucafirtefirte</p>
+      <p class="intro">Replicable exposure unit with timer, vacuum pump and light sensors</p>
     </div>
     <div class="chapters">
-      <h3 class="titolo">figofigo</h3>
+      <h3 class="titolo">Intro</h3>
       <div class="testo">
-        <p>tutto molto figo<img class="imm" src="media/finalprj/structure.jpg"/>
-          <div class="didasc">stocazzo</div>
+        <p>
+          <p>In the next weeks I'm going to build an exposure unit. It's a device used to make the cliché for screen printing, a <a href="https://en.wikipedia.org/wiki/Screen_printing" target="_blank">ink transfer printing technique</a>. Long story short it's used to expose to light a screenprint frame coated with a photosensitive emulsion: the light make this emulsion hard, corking the cloth on the frame. <br> In order to get a graphic on the frame a transparent film – with the graphic printed in black – is placed between the light and the coated frame: the emulsion won't harden in these shaded points and will be washable. The ink will go through the cloth thanks to the pressure of a squeegee, just opposite of what happens where the emulsion has become hard.</p>
+        </p>
+      </div>
+      <div class="spias"></div>
+      <h3 class="titolo">The project</h3>
+      <div class="testo">
+        <p>
+          <p>What I would achieve is an exposure unit that:
+            <ol>
+              <li><b>Burns well the frame</b>
+                <ul>
+                  <li>vacuum system integrated </li>
+                  <li>Fluorescent attinic tubes (good for some kind of emulsions) 10x18watt</li>
+                </ul>
+              </li><br>
+              <li><b> Gives you useful data</b>
+                <ul>
+                  <li>Light emitted</li>
+                  <li>Light's wavelength</li>
+                  <li>Temperature and umidity</li>
+                  <li>pressure of the vacuum</li>
+                </ul>
+              </li><br>
+              <li><b> Automates some processes and stores data</b>
+                <ul> 
+                  <li>timer</li>
+                  <li>Save time presets</li>
+                  <li>Store the data of (lux, time, wavelength) of each exposure</li>
+                  <li>time integration based on the light emitted (<a href="https://printwearmag.com/features/get-most-your-exposure-unit" target="_blank">more info</a>)</li>
+                  <li>automatically activate the compressor for the vacuum, turn on the light and keep the vacuum until the end of the timer.</li>
+                </ul>
+              </li><br>
+              <li><b>Have a dedicated space for the frame storage and dry</b></li>
+            </ol>
+          </p>
+        </p>
+      </div>
+      <div class="spias"></div>
+      <h3 class="titolo">Parts and systems</h3>
+      <div class="testo">
+        <p>
+          <p>I've divided in 9 parts the project, helping me to develop each one in parallel and integrate it if the testing gave good results</p>
+          <ol> 
+            <li>The main structure</li>
+            <li>The illumination</li>
+            <li>The timer</li>
+            <li>The vacuum system</li>
+            <li>Sensors</li>
+            <li>Interface on computer</li>
+            <li>Interface on the unit</li>
+            <li>Dryer and storage</li>
+            <li>Timer integration based on lux emitted</li>
+          </ol>
+        </p>
+      </div>
+      <div class="spias"></div>
+      <h3 class="titolo">First prototype, 20th june</h3>
+      <div class="testo">
+        <p><img class="imm" src="media/finalprj/structure.jpg"/>
+          <div class="didasc">First prototype of the structure</div>
+          <ol> 
+            <li>The main structure (beta)</li>
+            <li>The illumination</li>
+            <li>The timer</li>
+            <li class="barrato">The vacuum system</li>
+            <li>Sensors
+              <ul> 
+                <li>Temperature & Umidity</li>
+                <li>Lux emitted & Wavelength</li>
+                <li class="barrato">pressure sensor</li>
+              </ul>
+            </li>
+            <li>Interface on computer</li>
+            <li class="barrato">Interface on the unit</li>
+            <li class="barrato">Dryer and storage</li>
+            <li class="barrato">Timer integration based on lux emitted</li>
+          </ol>
+        </p>
+      </div>
+      <div class="spias"></div>
+      <h3 class="titolo">Components</h3>
+      <div class="testo">
+        <p>
+          <ul>
+            <li> Structure (beta)<br>wooden box (18mm thick) 71x91x20</li><br>
+            <li>Illumination
+              <ul> 
+                <li><a href="storie">Lamps x10</a></li>
+                <li><a href="storie">Ballasts x5</a></li>
+                <li><a href="storie">Starters x10</a></li>
+              </ul>
+            </li><br>
+            <li>Timer
+              <ul>
+                <li><a href="storie">Satshakit</a></li>
+              </ul>
+            </li><br>
+            <li>Sensors
+              <ul>
+                <li><a href="storie">Light sensors
+                    <ul>
+                      <li><a href="http://www.sparkfun.com/datasheets/Sensors/Imaging/TSL235R-LF.pdf">TSL235r</a></li>
+                      <li><a href=""> </a></li>
+                      <li><a href=""> </a></li>
+                    </ul></a></li>
+                <li><a href="storie">Pressure sensor</a></li>
+                <li><a href="storie">Temperature sensor</a></li>
+                <li><a href="storie">Umidity sensor</a></li>
+              </ul>
+            </li>
+          </ul>
         </p>
       </div>
       <div class="spias"></div>

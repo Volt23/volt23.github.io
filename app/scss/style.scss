@@ -19,7 +19,7 @@ $breakpoints: (
 $typi: (
   null: (16px, 1.4),
   small: (18px,1.4),
-  large: (20px,1.4)
+  large: (23px,1.4)
 );
 
 $intro-map: (
@@ -51,12 +51,12 @@ $third:#657980; //dark gray
 // Layout large (more than 1000px)/////////
 @include mappy-bp(large) {
 	.nav{@include span(10)
-		margin-left:span(1)+1%;
+		margin-left:span(0)-5%;
 		.sub-menu{padding-left:10px;}}
 	.header,.footer,.content{
 	@include break;
 	@include span(10);
-	margin-left: span(1);}
+	margin-left: span(0)-6%;}
 	.chapters{
 		@include break;
 	.titolo{@include span(2);
@@ -67,11 +67,12 @@ $third:#657980; //dark gray
 }
 }
 	.testo{
-		@include span(10);
+		@include span(11);
 		margin-left:-gutters;
 		p{margin:0;
 		padding:0;}
 		margin-bottom: 40px;
+
 	}
 	.spias{
 		@include span(2);
@@ -91,17 +92,25 @@ html {
 body#index{
 	background-color: $primary;
   	color: $primary2;
+
+.content{
+font-family:$light;
+p{}
+
+
+}
+
 }
 	///links
 	a{color: $primary2;
-	text-decoration: none;}
+	text-decoration: underline;}
 
 	a:visited{color: $second;
-	text-decoration: line-through;
+	text-decoration: $third;
 	}
 
 	a:hover{color: $primary2;
-	text-decoration: underline;}
+	text-decoration: line-through;}
 ////////////////////////
 
 // week /////////////////
