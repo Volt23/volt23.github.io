@@ -69,7 +69,8 @@ $third:#657980; //dark gray
 	.testo{
 		@include span(11);
 		margin-left:-gutters;
-		p{margin:0;
+		p{
+		margin:0;
 		padding:0;}
 		margin-bottom: 40px;
 

@@ -1,0 +1,11 @@
+doctype html
+html(lang="en")
+	include _head.pug
+	body#index
+		include _nav.pug
+		.content
+		#example1(data-chocolat-title="Set title")
+			a(class="chocolat-image" href="img/a.jpg" title="image caption a")
+				img(src="thumb/a.jpg")
+			a(class="chocolat-image" href="img/b.jpg" title="image caption b")
+				img(src="thumb/a.jpg")
