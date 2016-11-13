@@ -102,13 +102,31 @@ p{}
 }
 
 }
-	///links
-	a{color: $primary2;
-	text-decoration: underline;}
 
-	a:visited{color: $second;
-	text-decoration: $third;
-	}
+.button{
+	display: inline-block;
+	margin-top: 30px;
+	border-radius: 5px;
+	color: $primary2;
+	padding:8px 20px 8px 20px;
+	background-color: #03f2ae;
+	text-decoration:none;
+	-webkit-transition: background-color 0.8s, color 0.8s; /* Safari */
+
+}
+
+.button:hover{
+	background-color:white;
+	color:$primary;
+		text-decoration:none;
+
+}
+
+
+	///links
+	a{color: $second;
+	text-decoration: underline;
+-webkit-transition:color 0.8s;}
 
 	a:hover{color: $primary2;
 	text-decoration: line-through;}
@@ -118,14 +136,6 @@ p{}
 body#week{
 	background-color: $primary2;
   	color: $primary;
-  	.nav a{
-  		color: $primary;
-  	}
-
-  	a{
-  		color:$third;
-  		font-weight: bold;
-  	}
   	.placeholder{
   		background-color:$primary;
   	}
@@ -136,7 +146,8 @@ body#week{
 	margin-bottom: 30px;
 	p{
 	@include typi($intro-map);
-	margin-bottom: 30px;}
+	margin-bottom: 30px;
+	}
 }
 // week list homepage ////////////
 .weeks{
@@ -156,6 +167,11 @@ body#week{
 
 // navigation /////////////
 .nav {
+	a{
+	color: #03f2ae;
+	text-decoration:none;
+	font-weight:bold;}
+
 	margin-bottom:30px;
 	padding:0;
 	li{
@@ -163,12 +179,6 @@ body#week{
 	.right{
 		float:right;
 		padding:0;
-	}
-	a{
-		color:$second;
-	}
-	a:hover{
-		color:$primary2;
 	}
 
 

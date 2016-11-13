@@ -86,13 +86,26 @@ body#index {
 body#index .content {
   font-family: "HKGroteskLight"; }
 
-a {
+.button {
+  display: inline-block;
+  margin-top: 30px;
+  border-radius: 5px;
   color: white;
-  text-decoration: underline; }
+  padding: 8px 20px 8px 20px;
+  background-color: #03f2ae;
+  text-decoration: none;
+  -webkit-transition: background-color 0.8s, color 0.8s;
+  /* Safari */ }
 
-a:visited {
+.button:hover {
+  background-color: white;
+  color: #3f61ea;
+  text-decoration: none; }
+
+a {
   color: #dcdcd1;
-  text-decoration: #657980; }
+  text-decoration: underline;
+  -webkit-transition: color 0.8s; }
 
 a:hover {
   color: white;
@@ -101,13 +114,6 @@ a:hover {
 body#week {
   background-color: white;
   color: #3f61ea; }
-
-body#week .nav a {
-  color: #3f61ea; }
-
-body#week a {
-  color: #657980;
-  font-weight: bold; }
 
 body#week .placeholder {
   background-color: #3f61ea; }
@@ -144,18 +150,17 @@ body#week .placeholder {
   margin-bottom: 30px;
   padding: 0; }
 
+.nav a {
+  color: #03f2ae;
+  text-decoration: none;
+  font-weight: bold; }
+
 .nav li {
   padding-right: 6%; }
 
 .nav .right {
   float: right;
   padding: 0; }
-
-.nav a {
-  color: #dcdcd1; }
-
-.nav a:hover {
-  color: white; }
 
 .nav .sub-menu-parent {
   position: relative; }
