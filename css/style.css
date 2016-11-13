@@ -1,67 +1,26 @@
 @media all and (min-width: 62.5em) {
+  .content {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 66.66667%;
+    float: left;
+    padding-left: 0.83333%;
+    padding-right: 0.83333%;
+    margin-left: 6.66667% !important; }
   .nav {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    width: 83.33333%;
+    width: 66.66667%;
     float: left;
     padding-left: 0.83333%;
     padding-right: 0.83333%;
-    margin-left: -5%; }
-  .nav .sub-menu {
-    padding-left: 10px; }
-  .header, .footer, .content {
-    clear: both;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    width: 83.33333%;
-    float: left;
-    padding-left: 0.83333%;
-    padding-right: 0.83333%;
-    margin-left: -6%; }
-  .chapters {
-    clear: both; }
-  .chapters .titolo {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    width: 16.66667%;
-    float: left;
-    padding-left: 0.83333%;
-    padding-right: 0.83333%;
-    margin-left: -8.33333%;
-    text-align: right;
-    margin-top: 0px;
-    padding-right: 2.5%; }
-  .testo {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    width: 91.66667%;
-    float: left;
-    padding-left: 0.83333%;
-    padding-right: 0.83333%;
-    margin-left: -gutters;
-    margin-bottom: 40px; }
-  .testo p {
-    margin: 0;
-    padding: 0; }
-  .spias {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    width: 16.66667%;
-    float: left;
-    padding-left: 0.83333%;
-    padding-right: 0.83333%; } }
+    margin-left: 7.5% !important; } }
 
 html {
   font-size: 100%;
   line-height: 1.4;
-  max-width: 80%;
-  margin-left: auto;
-  margin-right: auto;
   font-family: "HKGroteskLight"; }
 
 @media all and (min-width: 800px) {
@@ -74,17 +33,28 @@ html {
     font-size: 143.75%;
     line-height: 1.4; } }
 
-html:after {
-  content: " ";
-  display: block;
-  clear: both; }
+canvas {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1; }
 
 body#index {
+  padding: 0px;
+  margin: 0px;
   background-color: #3f61ea;
   color: white; }
 
 body#index .content {
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
   font-family: "HKGroteskLight"; }
+
+body#index .content:after {
+  content: " ";
+  display: block;
+  clear: both; }
 
 .button {
   display: inline-block;
@@ -135,20 +105,17 @@ body#week .placeholder {
   .header p {
     font-size: 1rem; } }
 
-.weeks {
-  list-style-type: none;
-  padding: 0; }
-
-.weeks li {
-  padding: 10px 0px 3px 0px;
-  margin: 10px;
-  margin-left: 0px;
-  color: white;
-  border-top: 1px solid; }
-
 .nav {
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 30px;
   padding: 0; }
+
+.nav:after {
+  content: " ";
+  display: block;
+  clear: both; }
 
 .nav a {
   color: #03f2ae;
@@ -164,27 +131,6 @@ body#week .placeholder {
 
 .nav .sub-menu-parent {
   position: relative; }
-
-.nav .sub-menu {
-  visibility: hidden;
-  /* hides sub-menu */
-  opacity: 0;
-  position: absolute;
-  top: 100%;
-  left: -65%;
-  width: 180%;
-  transform: translateZ(0);
-  transform: translateY(10%);
-  transition: all 0.5s ease 0s, visibility 0s linear 0.5s;
-  /* the last value is the transition-delay for visibility */ }
-
-.nav .sub-menu-parent:hover .sub-menu {
-  visibility: visible;
-  /* shows sub-menu */
-  opacity: 1;
-  transform: translateX(0%);
-  transition-delay: 0s;
-  /* this removes the transition delay so the menu will be visible while the other styles transition */ }
 
 /* presentational */
 nav a {
@@ -205,29 +151,6 @@ nav > ul {
 
 nav > ul > li {
   display: inline-block; }
-
-nav > ul > li:first-child {
-  border-left: none; }
-
-.sub-menu {
-  font-size: 14px;
-  background: white; }
-
-.sub-menu a {
-  color: #3f61ea;
-  margin-left: 10px;
-  text-align: center;
-  padding: 10px;
-  border-bottom: 1px solid #3f61ea; }
-
-.sub-menu a:hover {
-  color: #3f61ea;
-  font-weight: bold;
-  text-decoration: line-through; }
-
-.sub-menu .num {
-  text-align: left;
-  color: #3f61ea; }
 
 .imm {
   clear: both;
