@@ -5,20 +5,49 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/hk-grotesk" type="text/css">
     <link rel="stylesheet" href="css/chocolat.css" type="text/css" media="screen" charset="utf-8">
+    <script src="http://code.jquery.com/jquery-latest.js" type="text/javascript"></script>
+    <script src="https://unpkg.com/isotope-layout@3.0/dist/isotope.pkgd.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="js/paper-full.min.js"></script>
     <script type="text/paperscript" src="js/script.js" canvas="myCanvas"></script>
   </head>
   <body id="index">
     <canvas id="myCanvas" resize></canvas>
-    <nav class="nav">
+    <div class="menuscreen">
+      <div class="wrap"><a href="index.html">
+          <svg class="logo logo2" width="100" height="50" href="index.html" fill="#03f2ae">
+            <polygon points="31.3,0 19.4,19.5 34.5,19.5 1.1,51.9 14.8,29.3 0,29.3 17.9,0"></polygon>
+          </svg></a><a href="#">
+          <svg class="menu cross">
+            <path d="M23.8,17.6l-8.4-7.1l8.4-7.1c0.9-0.8,1.1-2.1,0.5-2.9c-0.7-0.8-2-0.8-2.9-0.1l-9,7.5l-9-7.5 C2.4-0.2,1.1-0.2,0.4,0.6c-0.7,0.8-0.5,2.1,0.5,2.9l8.4,7.1l-8.4,7.1c-0.9,0.8-1.1,2.1-0.5,2.9c0.7,0.8,2,0.8,2.9,0.1l9-7.5l9,7.5 c0.9,0.8,2.3,0.8,2.9-0.1C24.9,19.7,24.7,18.4,23.8,17.6z"></path>
+          </svg></a>
+        <ul class="hamb">
+          <li> <a href="portfolio.html">Works</a></li>
+          <li><a href="media/curriculum.pdf" download>CV</a></li>
+          <li> <a class="last" href="about.html">About </a></li>
+        </ul>
+      </div>
+    </div>
+    <nav class="nav"><a href="index.html">
+        <svg class="logo" width="100" height="50" href="index.html" fill="#03f2ae">
+          <polygon points="31.3,0 19.4,19.5 34.5,19.5 1.1,51.9 14.8,29.3 0,29.3 17.9,0"></polygon>
+        </svg></a><a href="#">
+        <svg class="menu" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-1244 776 28 20" style="enable-background:new -1244 776 28 20" xml:space="preserve">
+          <path d="M-1241.6,780.2h23.1c1.1,0,1.9-0.9,1.9-1.9s-0.9-1.9-1.9-1.9h-23.1c-1.1,0-1.9,0.9-1.9,1.9S-1242.6,780.2-1241.6,780.2z M-1218.4,784.1h-23.1c-1.1,0-1.9,0.9-1.9,1.9s0.9,1.9,1.9,1.9h23.1c1.1,0,1.9-0.9,1.9-1.9S-1217.4,784.1-1218.4,784.1z M-1218.4,791.8h-23.1c-1.1,0-1.9,0.9-1.9,1.9s0.9,1.9,1.9,1.9h23.1c1.1,0,1.9-0.9,1.9-1.9S-1217.4,791.8-1218.4,791.8z"></path>
+        </svg></a>
       <ul>
+        <li> <a href="portfolio.html">Works</a></li>
+        <li><span>•</span></li>
         <li><a href="media/curriculum.pdf" download>CV</a></li>
-        <li> <a href="media/portfolio.pdf" download>Selected works</a></li>
+        <li><span>•</span></li>
+        <li> <a class="last" href="contacts.html">About</a></li>
       </ul>
     </nav>
     <div class="content">
-      <h1>Hi, I'm Ernesto Voltaggio</h1>
-      <p>I'm a communication designer, screenprinter and apprentice interaction designer. I like to work with both analog and digital media and experiment with different tools. I developeded my skills working on brand design, user experience, user interface and editorial design projects. <br><br>I've practiced screenprinting tecnique in <a href="www.sacremstudio.com" target="_blank">Sacrèm</a>, a visual communication laboratory in Milan and lately I've attended the <a href="http://fabacademy.org/about/diploma/">Fab Academy 2016</a> at <a href="www.opendotlab.com" target="_blank">Opendot</a> where I've practiced digital fabrication processess and learnt how to prototype embedded systems  – <a target="_blank" href="http://archive.fabacademy.org/archives/2016/opendot/students/191/index.html">Fab Academy portfolio</a>.</p><a class="button" id="daje" href="mailto:ernesto.volt@me.com?Subject=Hello" target="_top">Contact me</a>
+      <div class="intro">
+        <h1>Hi, I'm Ernesto Voltaggio</h1>
+        <p>I'm a communication designer, screenprinter and apprentice interaction designer. I like to work with both analog and digital media and experiment with different tools. I developeded my skills working on brand design, user experience, user interface and editorial design projects. <br><br>I've practiced screenprinting tecnique in <a href="www.sacremstudio.com" target="_blank">Sacrèm</a>, a visual communication laboratory in Milan and lately I've attended the <a href="http://fabacademy.org/about/diploma/">Fab Academy 2016</a> at <a href="www.opendotlab.com" target="_blank">Opendot</a> where I've practiced digital fabrication processess and learnt how to prototype embedded systems  – <a target="_blank" href="http://archive.fabacademy.org/archives/2016/opendot/students/191/index.html">Fab Academy portfolio</a>.</p>
+      </div><a class="button" id="daje" href="mailto:ernesto.volt@me.com?Subject=Hello" target="_top">Hire me</a>
     </div>
   </body>
 </html>

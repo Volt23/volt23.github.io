@@ -4,8 +4,31 @@ html(lang="en")
 	body#index
 		include _nav.pug
 		.content
-		#example1(data-chocolat-title="Set title")
-			a(class="chocolat-image" href="img/a.jpg" title="image caption a")
-				img(src="thumb/a.jpg")
-			a(class="chocolat-image" href="img/b.jpg" title="image caption b")
-				img(src="thumb/a.jpg")
+			h1.work Works <br>[work in progress]
+			.portfolioFilter
+				a(href='#' data-filter="*" class=".current") show all
+				a(href='#' data-filter=".graphic") Graphic design
+				a(href='#' data-filter=".interaction") Interaction design
+				a(href='#' data-filter=".fabrication") Digital Fabrication
+
+			.portfolioContainer
+				.masonry__column
+				.masonry__gutter
+				.grid-item.interaction(data-category="interaction")
+					a(href="tesla.html")
+						.overlay(data-content="Tesla magazine")
+							img.immport(src="media/tesla.png")
+				.grid-item.graphic(data-category="graphic")
+					a(href="#")
+						.overlay(data-content="Future Food District")
+							img.immport(src="media/coop.jpg")
+				.grid-item.interaction(data-category="interaction")
+					a(href="tesla.html")
+						img.immport(src="media/tesla.png")
+				.grid-item.interaction(data-category="interaction")
+					a(href="tesla.html")
+						img.immport(src="media/tesla.png")
+				.grid-item.interaction(data-category="interaction")
+					a(href="tesla.html")
+						img.immport(src="media/tesla.png")
+			.footer

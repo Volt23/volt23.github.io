@@ -1,15 +1,18 @@
 @import "../bower_components/mappy-breakpoints/mappy-breakpoints";
 @import "../bower_components/susy/sass/susy";
 @import "../bower_components/typi/scss/typi";
+@import "normalize";
 
 $susy: (
   columns: 12,
-  gutters: 1/4,
+  global-box-sizing:border-box,
   math: fluid,
   output: float,
-  gutter-position: inside,
+  gutter-position: outside,
+  //debug:(image:show),
 );
 
+@include border-box-sizing;
 
 $breakpoints: (
   small: 800px,
@@ -28,10 +31,22 @@ $intro-map: (
   large: 23px
   );
 
+$text-map:(
+	 null: (13px, 1.4),
+  small: 16px,
+  large: 20px
+  );
+
 $didasc: (
   null: (13px, 1.4),
   small: 15px,
   large: 18px
+  );
+
+$titleport-font-map: (
+  null: (28px, 1.4),
+  small: 18px,
+  large: 22px
   );
 
 // fonts //////////////
@@ -49,12 +64,53 @@ $third:#657980; //dark gray
 
 
 // Layout large (more than 1000px)/////////
-@include mappy-bp(large) {
-	.content{@include span(8);
-		margin-left: span(0.8)!important;}
-	.nav{@include span(8);
-		margin-left: span(0.9)!important;}
+$gutters1:1.6%;
+
+::selection {
+  background: #03f2ae; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: #03f2ae; /* Gecko Browsers */
+}
+
+
+@include mappy-bp(small) {
+	.nav .menu{display:none}
+	.nav a{display:block}
+	.nav ul{float:right}
+	.nav ul li a{padding-left: 15px;}
+	.nav span{display:block!important}
+	.grid-item{
+	width:span(4)!important;
+	margin-bottom: 1.2vw!important;}
+
+
+	.masonry__gutter {
+	  width: $gutters1 !important;
 	}
+
+	.masonry__column {
+	  width: span(4)!important; 
+	}
+	.last{margin-right:0px!important;}
+
+	.cover{
+		width: span(9.6 of 12);
+		margin-left: span(1.4);
+	}
+	}
+
+@include mappy-bp(large) {
+	.content{@include span(8 of 12)
+		margin-left: span(2)!important};
+	.nav{@include span(8 of 12);
+		margin-left: span(2)!important;
+	}
+
+	.content p{@include span(12)};
+
+}
+
 
 /////////////////////////
 
@@ -74,15 +130,104 @@ canvas{
 }
 
 
+
+body{
+	background-color:$primary;
+	color:$second;
+}
+
+// isotope //////////////
+
+.portfolioFilter{
+	text-align:center;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.portfolioFilter a{
+	margin-right: 0.8rem;
+}
+
+.portfolioFilter .current{
+	color:#03f2ae;
+	text-decoration:none;
+}
+
+.portfolioContainer{
+	@include container();
+	margin-top:30px;
+}
+
+.grid-item{
+	margin-bottom:3vw;
+	width:span(12);
+	color:$primary;
+	display:inline-block;
+}
+
+.masonry__column {
+  width: span(12); 
+}
+
+.imm{
+	@include break;
+	width:100%;
+	margin-top:10px;
+	padding-bottom:20px;
+}
+
+.immport{
+	position:relative;
+	width:100%;
+	vertical-align:top;
+}
+
+.overlay:after, .overlay:before {
+    position:absolute;
+    opacity:0;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}
+
+.overlay:before {
+	@include typi($titleport-font-map);
+    content: attr(data-content);
+    width:100%;
+    color:#03f2ae;
+    z-index:1;
+    top:44%;
+    padding:4px 10px;
+    text-align:center;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+}
+
+.overlay:after {
+    content: '\A';
+    position: absolute;
+    width: 100%; height:100%;
+    top:0; left:0;
+    border:10px solid #03f2ae;
+    background:rgba(0,0,0,0.6);
+    opacity: 0;
+    transition: all 1s;
+    -webkit-transition: all 1s;
+}
+
+.overlay:hover:after, .overlay:hover:before {
+    opacity: 1;
+}
+
 // home /////////////////
 body#index{
-	  padding:0px;
-  margin:0px;
+
 	background-color: $primary;
   	color: $primary2;
 
 .content{
   @include container(80%);
+  margin-top: 8vh;
+  height: 100vh;
 font-family:$light;
 p{}
 
@@ -90,10 +235,12 @@ p{}
 }
 
 }
+.intro{@include span(12)}
 
 .button{
 	display: inline-block;
 	margin-top: 30px;
+	margin-bottom:30px;
 	border-radius: 5px;
 	color: $primary2;
 	padding:8px 20px 8px 20px;
@@ -143,29 +290,19 @@ body#week{
 // navigation /////////////
 .nav {
 	  @include container(80%);
-
 	a{
 	color: #03f2ae;
 	text-decoration:none;
 	font-weight:bold;}
-
-	margin-bottom:30px;
 	padding:0;
 	li{
-	padding-right: 6%;}
-	.right{
-		float:right;
-		padding:0;
-	}
-
-
-	//////// sub-menu
-    .sub-menu-parent { position: relative; }
-  
+	display:inline-block;
+	margin-top:8px;
+}
 }
 /* presentational */
 
-nav a {display: block; padding: 20px 10px 10px 0px;}
+nav li a {display: none; padding: 20px 10px 10px 0px;}
 nav a:hover { color: $primary2; }
 nav ul,
 nav ul li { list-style-type: none; padding: 0; margin: 0; }
@@ -174,12 +311,7 @@ nav > ul > li { display: inline-block}
 
 //////////////////////////
 
-.imm{
-	@include break;
-	width:100%;
-	margin-top:10px;
-	padding-bottom:20px;
-}
+
 .didasc{
 	@include break;
 	@include typi($didasc)
@@ -200,9 +332,6 @@ nav > ul > li { display: inline-block}
 	height:300px;
 }
 
-.titolo{
-	margin-top:50px;
-}
 
 .intro{
 	margin-top:-15px;
@@ -212,3 +341,123 @@ nav > ul > li { display: inline-block}
 	text-decoration:line-through;
 }
 
+.logo{
+	float:left;
+	display:inline-block;
+	margin-top:20px;
+}
+a svg{
+	-webkit-transition:fill 0.8s;
+}
+
+a svg:hover{
+	fill: white;
+}
+
+///PORTFOLIO
+
+.portImm{width:100%; margin-bottom:2vw}
+
+.work{text-align:center;}
+
+.article{
+}
+
+.article{
+	p{@include typi($text-map);}
+	h2,h4{margin:0px; padding:0px;text-align:center!important;}
+	h4{padding-bottom:1.5vw}
+
+}
+
+.testoart{
+	@include span(12);
+	margin-bottom:5vw;
+}
+
+
+.titolo{
+	display:block;
+	margin-top:0px;
+}
+
+.data{
+	display:block;
+	margin-top:10px;
+	padding:0;
+}
+
+
+////////////////////
+
+
+
+.nav span{display: none}
+
+
+//menu
+
+.menu{
+	fill: #03f2ae;
+	float:right;
+	display:inline-block;
+	margin-top:30px;
+	width:30px;
+	-webkit-transition:all 0.8s;
+
+}
+
+.menu:hover{
+	fill: white;
+}
+
+.wrap{@include container(80%);}
+.menuscreen{
+	display:none;
+	z-index:1;
+	position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background-color:white;
+}
+.hamb{
+	padding:0px;
+	position:float;
+	margin-top:30vh;
+		li{
+		list-style-type: none;
+		padding-bottom:30px;
+		text-align:center;
+
+}
+a:hover{
+	color:black;
+}}
+
+.hamb li a{
+	border-bottom:solid 3px;
+	color:$primary;
+	text-decoration: none;
+	font-size:30px;
+}
+
+.cross{fill:blue;
+	position:absolute;
+	right:9.5%;
+	top:0px;
+}
+.cross:hover{
+	fill:black;
+}
+
+.logo2{display:none;
+fill:blue;
+position:absolute;
+top:0px;
+}
+
+.logo2:hover{
+	fill:black;
+}
