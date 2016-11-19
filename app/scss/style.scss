@@ -415,7 +415,7 @@ a svg:hover{
 	fill: white;
 }
 
-.wrap{@include container(80%);}
+.wrap{@include container(90%);}
 .menuscreen{
 	display:none;
 	z-index:1;
@@ -449,7 +449,7 @@ a:hover{
 
 .cross{fill:blue;
 	position:absolute;
-	right:9.5%;
+	right:4.3%;
 	top:0px;
 }
 .cross:hover{

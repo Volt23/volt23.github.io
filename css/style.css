@@ -790,7 +790,7 @@ a svg:hover {
   fill: white; }
 
 .wrap {
-  max-width: 80%;
+  max-width: 90%;
   margin-left: auto;
   margin-right: auto; }
 
@@ -831,7 +831,7 @@ a svg:hover {
 .cross {
   fill: blue;
   position: absolute;
-  right: 9.5%;
+  right: 4.3%;
   top: 0px; }
 
 .cross:hover {
