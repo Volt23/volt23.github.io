@@ -578,7 +578,7 @@ body#index {
   color: white; }
 
 body#index .content {
-  max-width: 93%;
+  max-width: 90%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 8vh;
@@ -647,7 +647,7 @@ body#week .placeholder {
     font-size: 1rem; } }
 
 .nav {
-  max-width: 93%;
+  max-width: 90%;
   margin-left: auto;
   margin-right: auto;
   padding: 0; }

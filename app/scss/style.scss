@@ -228,7 +228,7 @@ body#index{
   	color: $primary2;
 
 .content{
-  @include container(93%);
+  @include container(90%);
   margin-top: 8vh;
   height: 100vh;
 font-family:$light;
@@ -292,7 +292,7 @@ body#week{
 
 // navigation /////////////
 .nav {
-	  @include container(93%);
+	  @include container(90%);
 	a{
 	color: #03f2ae;
 	text-decoration:none;
