@@ -415,7 +415,15 @@ template {
   background: #03f2ae;
   /* Gecko Browsers */ }
 
-@media all and (min-width: 50em) {
+@media all and (min-width: 37.5em) {
+  .content {
+    width: 83.05085%;
+    float: left;
+    margin-left: 8.47458% !important; }
+  .nav {
+    width: 83.05085%;
+    float: left;
+    margin-left: 8.47458% !important; }
   .nav .menu {
     display: none; }
   .nav a {
@@ -439,15 +447,15 @@ template {
     width: 79.66102%;
     margin-left: 10.16949%; } }
 
-@media all and (min-width: 62.5em) {
+@media all and (min-width: 75em) {
   .content {
     width: 66.10169%;
     float: left;
-    margin-left: 15.25424% !important; }
+    margin-left: 16.94915% !important; }
   .nav {
     width: 66.10169%;
     float: left;
-    margin-left: 15.25424% !important; }
+    margin-left: 16.94915% !important; }
   .content p {
     width: 100%;
     float: left;
@@ -459,12 +467,12 @@ html {
   line-height: 1.4;
   font-family: "HKGroteskLight"; }
 
-@media all and (min-width: 800px) {
+@media all and (min-width: 600px) {
   html {
     font-size: 112.5%;
     line-height: 1.4; } }
 
-@media all and (min-width: 1000px) {
+@media all and (min-width: 1200px) {
   html {
     font-size: 143.75%;
     line-height: 1.4; } }
@@ -535,17 +543,17 @@ body {
   width: 100%;
   color: #03f2ae;
   z-index: 1;
-  top: 44%;
+  top: 40%;
   padding: 4px 10px;
   text-align: center;
   box-sizing: border-box;
   -moz-box-sizing: border-box; }
 
-@media all and (min-width: 800px) {
+@media all and (min-width: 600px) {
   .overlay:before {
     font-size: 1rem; } }
 
-@media all and (min-width: 1000px) {
+@media all and (min-width: 1200px) {
   .overlay:before {
     font-size: 0.95652rem; } }
 
@@ -556,7 +564,7 @@ body {
   height: 100%;
   top: 0;
   left: 0;
-  border: 10px solid #03f2ae;
+  border: 7px solid #03f2ae;
   background: rgba(0, 0, 0, 0.6);
   opacity: 0;
   transition: all 1s;
@@ -570,7 +578,7 @@ body#index {
   color: white; }
 
 body#index .content {
-  max-width: 80%;
+  max-width: 93%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 8vh;
@@ -630,16 +638,16 @@ body#week .placeholder {
   line-height: 1.4;
   margin-bottom: 30px; }
 
-@media all and (min-width: 800px) {
+@media all and (min-width: 600px) {
   .header p {
     font-size: 1.11111rem; } }
 
-@media all and (min-width: 1000px) {
+@media all and (min-width: 1200px) {
   .header p {
     font-size: 1rem; } }
 
 .nav {
-  max-width: 80%;
+  max-width: 93%;
   margin-left: auto;
   margin-right: auto;
   padding: 0; }
@@ -688,11 +696,11 @@ nav > ul > li {
   text-align: right;
   margin-top: -30px; }
 
-@media all and (min-width: 800px) {
+@media all and (min-width: 600px) {
   .didasc {
     font-size: 0.83333rem; } }
 
-@media all and (min-width: 1000px) {
+@media all and (min-width: 1200px) {
   .didasc {
     font-size: 0.78261rem; } }
 
@@ -732,11 +740,11 @@ a svg:hover {
   font-size: 0.8125rem;
   line-height: 1.4; }
 
-@media all and (min-width: 800px) {
+@media all and (min-width: 600px) {
   .article p {
     font-size: 0.88889rem; } }
 
-@media all and (min-width: 1000px) {
+@media all and (min-width: 1200px) {
   .article p {
     font-size: 0.86957rem; } }
 
@@ -763,6 +771,9 @@ a svg:hover {
   display: block;
   margin-top: 10px;
   padding: 0; }
+
+.data h4 {
+  color: #03f2ae; }
 
 .nav span {
   display: none; }

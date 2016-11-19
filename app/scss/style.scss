@@ -15,8 +15,8 @@ $susy: (
 @include border-box-sizing;
 
 $breakpoints: (
-  small: 800px,
-  large: 1000px
+  small: 600px,
+  large: 1200px,
 );
 
 $typi: (
@@ -56,6 +56,7 @@ $bold:'HKGroteskBold';
 ///////////////////////
 
 // colors //////////////
+$green:#03f2ae;
 $primary:#3f61ea; //blue
 $primary2:white; //white
 $second:#dcdcd1; //light gray
@@ -73,8 +74,12 @@ $gutters1:1.6%;
   background: #03f2ae; /* Gecko Browsers */
 }
 
-
-@include mappy-bp(small) {
+ @include mappy-bp(small) {
+ 	.content{@include span(10 of 12)
+		margin-left: span(1 wide)!important};
+	.nav{@include span(10 of 12);
+		margin-left: span(1 wide)!important;
+	}
 	.nav .menu{display:none}
 	.nav a{display:block}
 	.nav ul{float:right}
@@ -102,16 +107,14 @@ $gutters1:1.6%;
 
 @include mappy-bp(large) {
 	.content{@include span(8 of 12)
-		margin-left: span(2)!important};
+		margin-left: span(2 wide)!important};
 	.nav{@include span(8 of 12);
-		margin-left: span(2)!important;
+		margin-left: span(2 wide)!important;
 	}
 
 	.content p{@include span(12)};
 
 }
-
-
 /////////////////////////
 
 // general //////////////
@@ -195,7 +198,7 @@ body{
     width:100%;
     color:#03f2ae;
     z-index:1;
-    top:44%;
+    top:40%;
     padding:4px 10px;
     text-align:center;
     box-sizing:border-box;
@@ -207,7 +210,7 @@ body{
     position: absolute;
     width: 100%; height:100%;
     top:0; left:0;
-    border:10px solid #03f2ae;
+    border:7px solid #03f2ae;
     background:rgba(0,0,0,0.6);
     opacity: 0;
     transition: all 1s;
@@ -225,7 +228,7 @@ body#index{
   	color: $primary2;
 
 .content{
-  @include container(80%);
+  @include container(93%);
   margin-top: 8vh;
   height: 100vh;
 font-family:$light;
@@ -289,7 +292,7 @@ body#week{
 
 // navigation /////////////
 .nav {
-	  @include container(80%);
+	  @include container(93%);
 	a{
 	color: #03f2ae;
 	text-decoration:none;
@@ -385,6 +388,7 @@ a svg:hover{
 	display:block;
 	margin-top:10px;
 	padding:0;
+	h4{color:$green}
 }
 
 
