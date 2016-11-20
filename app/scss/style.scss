@@ -2,27 +2,26 @@
 @import "../bower_components/susy/sass/susy";
 @import "../bower_components/typi/scss/typi";
 @import "normalize";
-
-$susy: (
-  columns: 12,
-  global-box-sizing:border-box,
-  math: fluid,
-  output: float,
-  gutter-position: outside,
-  //debug:(image:show),
-);
+@import "modules/colors";
+@import "modules/grid";
 
 @include border-box-sizing;
 
 $breakpoints: (
-  small: 600px,
-  large: 1200px,
+  small: 650px,
+  large: 1100px,
 );
 
 $typi: (
   null: (16px, 1.4),
   small: (18px,1.4),
   large: (23px,1.4)
+);
+
+$importante-map: (
+  null: (18px, 1.4),
+  small: (22px,1.4),
+  large: (25px,1.4)
 );
 
 $intro-map: (
@@ -45,8 +44,14 @@ $didasc: (
 
 $titleport-font-map: (
   null: (28px, 1.4),
-  small: 18px,
+  small: 22px,
   large: 22px
+  );
+
+$footer-map: (
+  null: (10px, 1.4),
+  small: 13px,
+  large: 16px
   );
 
 // fonts //////////////
@@ -56,11 +61,6 @@ $bold:'HKGroteskBold';
 ///////////////////////
 
 // colors //////////////
-$green:#03f2ae;
-$primary:#3f61ea; //blue
-$primary2:white; //white
-$second:#dcdcd1; //light gray
-$third:#657980; //dark gray
 ///////////////////////
 
 
@@ -68,23 +68,50 @@ $third:#657980; //dark gray
 $gutters1:1.6%;
 
 ::selection {
-  background: #03f2ae; /* WebKit/Blink Browsers */
+  background: #03f2ae;
+  color:white; /* WebKit/Blink Browsers */
 }
 ::-moz-selection {
-  background: #03f2ae; /* Gecko Browsers */
+  background: #03f2ae;
+  color:white /* Gecko Browsers */
 }
 
  @include mappy-bp(small) {
- 	.content{@include span(10 of 12)
-		margin-left: span(1 wide)!important};
-	.nav{@include span(10 of 12);
-		margin-left: span(1 wide)!important;
+ 	.content{@include span(9 of 12)
+		margin-left: span(1.5 wide)!important};
+	.nav{@include span(9 of 12);
+		margin-left: span(1.5 wide)!important;
 	}
 	.nav .menu{display:none}
 	.nav a{display:block}
 	.nav ul{float:right}
 	.nav ul li a{padding-left: 15px;}
 	.nav span{display:block!important}
+	.grid-item{
+	width:span(6)!important;
+	margin-bottom: 1.2vw!important;}
+
+
+	.masonry__gutter {
+	  width: $gutters1 !important;
+	}
+
+	.masonry__column {
+	  width: span(6)!important; 
+	}
+	.last{margin-right:0px!important;}
+
+	}
+
+@include mappy-bp(large) {
+	.content{@include span(8 of 12)
+		margin-left: span(2 wide)!important};
+	.nav{@include span(8 of 12);
+		margin-left: span(2 wide)!important;
+	}
+
+	.content p{@include span(12)};
+
 	.grid-item{
 	width:span(4)!important;
 	margin-bottom: 1.2vw!important;}
@@ -97,22 +124,6 @@ $gutters1:1.6%;
 	.masonry__column {
 	  width: span(4)!important; 
 	}
-	.last{margin-right:0px!important;}
-
-	.cover{
-		width: span(9.6 of 12);
-		margin-left: span(1.4);
-	}
-	}
-
-@include mappy-bp(large) {
-	.content{@include span(8 of 12)
-		margin-left: span(2 wide)!important};
-	.nav{@include span(8 of 12);
-		margin-left: span(2 wide)!important;
-	}
-
-	.content p{@include span(12)};
 
 }
 /////////////////////////
@@ -121,6 +132,8 @@ $gutters1:1.6%;
 html {
   @include typi-base();
   font-family:$light;
+  height:100%;
+  width:100%;
 }
 //////////////////////////
 
@@ -196,11 +209,12 @@ body{
 	@include typi($titleport-font-map);
     content: attr(data-content);
     width:100%;
-    color:#03f2ae;
+    color:$primary;
     z-index:1;
-    top:40%;
+    top:42%;
     padding:4px 10px;
     text-align:center;
+    vertical-align: middle;
     box-sizing:border-box;
     -moz-box-sizing:border-box;
 }
@@ -210,11 +224,11 @@ body{
     position: absolute;
     width: 100%; height:100%;
     top:0; left:0;
-    border:7px solid #03f2ae;
-    background:rgba(0,0,0,0.6);
+    //border:7px solid #03f2ae;
+    background:rgba(3,242,174,1);
     opacity: 0;
-    transition: all 1s;
-    -webkit-transition: all 1s;
+    transition: all 0.4s;
+    -webkit-transition: all 0.4s;
 }
 
 .overlay:hover:after, .overlay:hover:before {
@@ -226,23 +240,22 @@ body#index{
 
 	background-color: $primary;
   	color: $primary2;
+}
 
 .content{
   @include container(90%);
   margin-top: 8vh;
-  height: 100vh;
+  height: calc(100vh+100px);
 font-family:$light;
-p{}
 
 
 }
-
-}
-.intro{@include span(12)}
 
 .button{
-	display: inline-block;
-	margin-top: 30px;
+	display: block;
+	width:span(4);
+	text-align:center;
+	margin-top: 50px;
 	margin-bottom:30px;
 	border-radius: 5px;
 	color: $primary2;
@@ -262,11 +275,11 @@ p{}
 
 
 	///links
-	a{color: $second;
+	a{color: white;
 	text-decoration: underline;
 -webkit-transition:color 0.8s;}
 
-	a:hover{color: $primary2;
+	a:hover{color: $green;
 	text-decoration: line-through;}
 ////////////////////////
 
@@ -415,10 +428,11 @@ a svg:hover{
 	fill: white;
 }
 
-.wrap{@include container(90%);}
+.wrapmenu{@include container(90%);}
+
 .menuscreen{
 	display:none;
-	z-index:1;
+	z-index:2;
 	position:fixed;
 	top:0;
 	left:0;
@@ -464,4 +478,54 @@ top:0px;
 
 .logo2:hover{
 	fill:black;
+}
+
+.importante{
+	font-family:$bold;
+	text-decoration:none;
+	color:$green;
+}
+.importante:hover{
+	color:white;
+}
+.center{
+	img{
+	margin-top:0;
+	padding-top:0;}
+	width:span(6);
+	margin-left:span(3 wide);
+}
+
+/// Pagine portfolio: sfondo bianco testi blu
+
+#white{
+	a{color:$green};
+	a:hover{color:black;}
+	background-color:white;
+	color:$primary;
+	.logo{fill:$primary};
+	.logo:hover{fill:$green};
+	.menu{fill:$primary};
+	.menu:hover{fill:$green}
+	.menuscreen{
+		background-color:$primary;
+		a{color:white;};
+		a:hover{color:$green};
+		.logo{fill:white};
+		.menu{fill:white};
+		.logo:hover{fill:$green};
+		.menu:hover{fill:$green};
+	}
+	.nav{
+		a{color:$primary};
+		a:hover{color:$green};
+	}
+}
+#footer {
+@include typi($footer-map);
+ clear: both;
+ position: relative;
+ z-index: 10;
+ height: 5em;
+ margin-top: -3em;
 }

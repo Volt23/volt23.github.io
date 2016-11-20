@@ -4,7 +4,7 @@ html(lang="en")
 	body#index
 		include _nav.pug
 		.content
-			h1.work Works <br>[work in progress]
+			h1.work Works
 			.portfolioFilter
 				a(href='#' data-filter="*" class=".current") show all
 				a(href='#' data-filter=".graphic") Graphic design
@@ -19,16 +19,17 @@ html(lang="en")
 						.overlay(data-content="Tesla magazine")
 							img.immport(src="media/tesla.png")
 				.grid-item.graphic(data-category="graphic")
-					a(href="#")
+					a(href="coop.html")
 						.overlay(data-content="Future Food District")
 							img.immport(src="media/coop.jpg")
 				.grid-item.interaction(data-category="interaction")
-					a(href="tesla.html")
-						img.immport(src="media/coop.jpg")
+					a(href="gammy.html")
+						.overlay(data-content="Gammy Builder")
+							img.immport(src="media/board.jpg")
 				.grid-item.interaction(data-category="interaction")
-					a(href="tesla.html")
+					a(href="gammy.html")
 						img.immport(src="media/tesla.png")
 				.grid-item.interaction(data-category="interaction")
 					a(href="tesla.html")
 						img.immport(src="media/tesla.png")
-
+		include _footer.pug
