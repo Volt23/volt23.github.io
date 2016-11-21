@@ -7,18 +7,19 @@ html(lang="en")
 			h1.work Works
 			.portfolioFilter
 				a(href='#' data-filter="*" class=".current") show all
-				a(href='#' data-filter=".graphic") Graphic design
-				a(href='#' data-filter=".interaction") Interaction design
-				a(href='#' data-filter=".fabrication") Digital Fabrication
+				a(href='#' data-filter=".brand") Brand design
+				a(href='#' data-filter=".interaction") Digital Fabrication
+				a(href='#' data-filter=".illustration") Illustration
+
 
 			.portfolioContainer
 				.masonry__column
 				.masonry__gutter
-				.grid-item.interaction(data-category="interaction")
+				.grid-item.brand(data-category="brand")
 					a(href="tesla.html")
 						.overlay(data-content="Tesla magazine")
 							img.immport(src="media/tesla.png")
-				.grid-item.graphic(data-category="graphic")
+				.grid-item.illustration(data-category="illustration")
 					a(href="coop.html")
 						.overlay(data-content="Future Food District")
 							img.immport(src="media/coop.jpg")
@@ -26,10 +27,24 @@ html(lang="en")
 					a(href="gammy.html")
 						.overlay(data-content="Gammy Builder")
 							img.immport(src="media/board.jpg")
+				.grid-item.brand(data-category="brand")
+					a(href="mimoto.html")
+						.overlay(data-content="Mimoto")
+							img.immport(src="media/mimoto.jpg")
+				.grid-item.brand(data-category="brand")
+					a(href="gameoriented.html")
+						.overlay(data-content="Game Oriented Institute")
+							img.immport(src="media/gameoriented.jpg")
+				.grid-item.brand(data-category="brand")
+					a(href="casedelquartiere.html")
+						.overlay(data-content="Logo per le case del quartiere")
+							img.immport(src="media/case.jpg")
+				.grid-item.brand(data-category="brand")
+					a(href="casedelquartiere.html")
+						.overlay(data-content="Logo per le case del quartiere")
+							img.immport(src="media/totem.jpg")
 				.grid-item.interaction(data-category="interaction")
-					a(href="gammy.html")
-						img.immport(src="media/tesla.png")
-				.grid-item.interaction(data-category="interaction")
-					a(href="tesla.html")
-						img.immport(src="media/tesla.png")
+					a(href="sacrembox.html")
+						.overlay(data-content="DIY Exposure unit")
+							img.immport(src="media/bromo.jpg")
 		include _footer.pug

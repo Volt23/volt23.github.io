@@ -1,0 +1,23 @@
+doctype html
+html(lang="en")
+	include _head.pug
+	body#white
+		include _nav.pug
+		.content
+			.article
+				.titolo
+					h2 Various logos		
+				.data
+					h4 2014
+				.testoart
+					p stuff
+				img.portImm(src="media/gammy_/board_schema.jpg")
+				img.portImm(src="media/gammy_/board.jpg" alt="board")
+				img.portImm(src="media/gammy_/blocks.jpg")
+				img.portImm(src="media/gammy_/circuito_pezzo.jpg")
+				img.portImm(src="media/gammy_/circuit.jpg")
+				p The video of the first prototype, video by Vittorio Bonfatti
+				video.portImm(width="100%" controls)
+					source(src="media/gammy_/video.mp4" type="video/mp4")
+
+		include _footer.pug
