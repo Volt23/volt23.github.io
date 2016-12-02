@@ -4,8 +4,15 @@
 @import "normalize";
 @import "modules/colors";
 @import "modules/grid";
+@import "modules/dropdown";
 
 @include border-box-sizing;
+
+$green:#03f2ae;
+$primary:#3030ef; //blue
+$primary2:white; //white
+$second:#dcdcd1; //light gray
+$third:#657980; //dark gray
 
 $breakpoints: (
   small: 650px,

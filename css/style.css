@@ -402,6 +402,46 @@ template {
 [hidden] {
   display: none; }
 
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer; }
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block; }
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); }
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block; }
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #f1f1f1; }
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block; }
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41; }
+
 *, *:before, *:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -491,7 +531,7 @@ canvas {
   z-index: -1; }
 
 body {
-  background-color: #3f61ea;
+  background-color: #3030ef;
   color: #dcdcd1; }
 
 .portfolioFilter {
@@ -520,7 +560,7 @@ body {
 .grid-item {
   margin-bottom: 3vw;
   width: 100%;
-  color: #3f61ea;
+  color: #3030ef;
   display: inline-block; }
 
 .masonry__column {
@@ -548,7 +588,7 @@ body {
   line-height: 1.4;
   content: attr(data-content);
   width: 100%;
-  color: #3f61ea;
+  color: #3030ef;
   z-index: 1;
   top: 42%;
   padding: 4px 10px;
@@ -581,7 +621,7 @@ body {
   opacity: 1; }
 
 body#index {
-  background-color: #3f61ea;
+  background-color: #3030ef;
   color: white; }
 
 .content {
@@ -613,7 +653,7 @@ body#index {
 
 .button:hover {
   background-color: white;
-  color: #3f61ea;
+  color: #3030ef;
   text-decoration: none; }
 
 a {
@@ -627,10 +667,10 @@ a:hover {
 
 body#week {
   background-color: white;
-  color: #3f61ea; }
+  color: #3030ef; }
 
 body#week .placeholder {
-  background-color: #3f61ea; }
+  background-color: #3030ef; }
 
 .header {
   border-bottom: 1px solid;
@@ -827,7 +867,7 @@ a svg:hover {
 
 .hamb li a {
   border-bottom: solid 3px;
-  color: #3f61ea;
+  color: #3030ef;
   text-decoration: none;
   font-size: 30px; }
 
@@ -867,7 +907,7 @@ a svg:hover {
 
 #white {
   background-color: white;
-  color: #3f61ea; }
+  color: #3030ef; }
 
 #white a {
   color: #03f2ae; }
@@ -876,19 +916,19 @@ a svg:hover {
   color: black; }
 
 #white .logo {
-  fill: #3f61ea; }
+  fill: #3030ef; }
 
 #white .logo:hover {
   fill: #03f2ae; }
 
 #white .menu {
-  fill: #3f61ea; }
+  fill: #3030ef; }
 
 #white .menu:hover {
   fill: #03f2ae; }
 
 #white .menuscreen {
-  background-color: #3f61ea; }
+  background-color: #3030ef; }
 
 #white .menuscreen a {
   color: white; }
@@ -909,7 +949,7 @@ a svg:hover {
   fill: #03f2ae; }
 
 #white .nav a {
-  color: #3f61ea; }
+  color: #3030ef; }
 
 #white .nav a:hover {
   color: #03f2ae; }
