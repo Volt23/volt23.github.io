@@ -574,12 +574,13 @@ body {
 
 .grid-item img {
   cursor: url("/media/arrow.png"), auto;
-  -webkit-transition: all 0.3s ease-out; }
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out; }
 
-.grid-item:hover img {
+div.grid-item:hover img {
   margin-top: -5px; }
 
-.grid-item:hover h4 a {
+div.grid-item:hover h4 a {
   color: #03f2ae; }
 
 .masonry__column {
