@@ -578,7 +578,7 @@ body {
   transition: all 0.3s ease-out; }
 
 div.grid-item:hover img {
-  margin-top: -5px; }
+  transform: translateY(-10px); }
 
 div.grid-item:hover h4 a {
   color: #03f2ae; }
