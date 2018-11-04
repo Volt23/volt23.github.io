@@ -5,6 +5,7 @@ $(document).ready(function(){
         $('.menuscreen').fadeToggle();
         $('.logo2').fadeToggle();
     });
+    
 })
 
 $(window).load(function(){

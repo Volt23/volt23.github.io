@@ -457,6 +457,10 @@ template {
   color: white; }
 
 @media all and (min-width: 40.625em) {
+  footer {
+    width: 74.57627%;
+    float: left;
+    margin-left: 12.71186%; }
   .content {
     width: 74.57627%;
     float: left;
@@ -464,19 +468,10 @@ template {
   .nav {
     width: 74.57627%;
     float: left;
-    margin-left: 12.71186% !important; }
-  .nav .menu {
-    display: none; }
-  .nav a {
-    display: block; }
-  .nav ul {
-    float: right; }
-  .nav ul li a {
-    padding-left: 15px; }
-  .nav span {
-    display: block !important; }
+    margin-left: 12.71186% !important;
+    margin-top: 25px; }
   .grid-item {
-    width: 49.15254% !important;
+    width: 100% !important;
     margin-bottom: 1.2vw !important; }
   .masonry__gutter {
     width: 1.6% !important; }
@@ -489,23 +484,37 @@ template {
   .content {
     width: 66.10169%;
     float: left;
-    margin-left: 16.94915% !important; }
+    margin-left: 16.94915% !important;
+    margin-top: 4vh !important; }
   .nav {
     width: 66.10169%;
     float: left;
-    margin-left: 16.94915% !important; }
-  .content p {
-    width: 100%;
-    float: left;
-    margin-left: 0;
-    margin-right: 0; }
+    margin-left: 16.94915% !important;
+    margin-top: 4vh !important; }
+  .dida {
+    font-size: 1rem;
+    line-height: 1.4; } }
+
+@media all and (min-width: 68.75em) and (min-width: 650px) {
+  .dida {
+    font-size: 1rem;
+    line-height: 1.4; } }
+
+@media all and (min-width: 68.75em) and (min-width: 1100px) {
+  .dida {
+    font-size: 0.78261rem;
+    line-height: 1.4; } }
+
+@media all and (min-width: 68.75em) {
+  .portfolioContainer {
+    margin-top: 10vh !important; }
   .grid-item {
-    width: 32.20339% !important;
+    width: 49.15254% !important;
     margin-bottom: 1.2vw !important; }
   .masonry__gutter {
     width: 1.6% !important; }
   .masonry__column {
-    width: 32.20339% !important; } }
+    width: 49.15254% !important; } }
 
 html {
   font-size: 100%;
@@ -550,7 +559,7 @@ body {
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 30px; }
+  margin-top: 5vh; }
 
 .portfolioContainer:after {
   content: " ";
@@ -561,7 +570,18 @@ body {
   margin-bottom: 3vw;
   width: 100%;
   color: #3030ef;
-  display: inline-block; }
+  display: inline-block;
+  transition: all 0.3s ease-out; }
+
+.grid-item img {
+  cursor: url("/media/arrow.png"), auto;
+  transition: all 0.3s ease-out; }
+
+.grid-item:hover a img {
+  margin-top: -5px; }
+
+.grid-item:hover h4 a {
+  color: #03f2ae; }
 
 .masonry__column {
   width: 100%; }
@@ -577,49 +597,6 @@ body {
   width: 100%;
   vertical-align: top; }
 
-.overlay:after, .overlay:before {
-  position: absolute;
-  opacity: 0;
-  transition: all 0.5s;
-  -webkit-transition: all 0.5s; }
-
-.overlay:before {
-  font-size: 1.75rem;
-  line-height: 1.4;
-  content: attr(data-content);
-  width: 100%;
-  color: #3030ef;
-  z-index: 1;
-  top: 42%;
-  padding: 4px 10px;
-  text-align: center;
-  vertical-align: middle;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box; }
-
-@media all and (min-width: 650px) {
-  .overlay:before {
-    font-size: 1.22222rem; } }
-
-@media all and (min-width: 1100px) {
-  .overlay:before {
-    font-size: 0.95652rem; } }
-
-.overlay:after {
-  content: '\A';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background: #03f2ae;
-  opacity: 0;
-  transition: all 0.4s;
-  -webkit-transition: all 0.4s; }
-
-.overlay:hover:after, .overlay:hover:before {
-  opacity: 1; }
-
 body#index {
   background-color: #3030ef;
   color: white; }
@@ -628,7 +605,7 @@ body#index {
   max-width: 90%;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 8vh;
+  margin-top: 3vh;
   height: calc(100vh+100px);
   font-family: "HKGroteskLight"; }
 
@@ -655,6 +632,22 @@ body#index {
   background-color: white;
   color: #3030ef;
   text-decoration: none; }
+
+.dida {
+  color: white;
+  margin-top: 2vh;
+  margin-bottom: 4vh; }
+
+.dida h4, .dida p {
+  margin: 0px;
+  padding: 0px;
+  -webkit-transition: all 0.8s; }
+
+.dida h4 span, .dida p span {
+  position: absolute;
+  color: #03f2ae;
+  right: 0;
+  text-align: right !important; }
 
 a {
   color: white;
@@ -693,6 +686,7 @@ body#week .placeholder {
   max-width: 90%;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 2vh;
   padding: 0; }
 
 .nav:after {
@@ -705,30 +699,29 @@ body#week .placeholder {
   text-decoration: none;
   font-weight: bold; }
 
+.nav a:hover {
+  color: white; }
+
 .nav li {
   display: inline-block;
   margin-top: 8px; }
 
+.nav .menu {
+  display: none; }
+
+.nav a {
+  display: block; }
+
+.nav ul {
+  float: right; }
+
+.nav ul li a {
+  padding-left: 15px; }
+
+.nav span {
+  display: block !important; }
+
 /* presentational */
-nav li a {
-  display: none;
-  padding: 20px 10px 10px 0px; }
-
-nav a:hover {
-  color: white; }
-
-nav ul,
-nav ul li {
-  list-style-type: none;
-  padding: 0;
-  margin: 0; }
-
-nav > ul {
-  text-align: left; }
-
-nav > ul > li {
-  display: inline-block; }
-
 .didasc {
   clear: both;
   font-size: 0.8125rem;
@@ -752,8 +745,15 @@ nav > ul > li {
   width: 100%;
   height: 30vh; }
 
-.footer {
-  height: 300px; }
+footer {
+  height: 12vw;
+  margin-top: 1vw;
+  width: 74.57627%;
+  float: left;
+  margin-left: 12.71186%; }
+
+footer h5 {
+  text-align: center; }
 
 .intro {
   margin-top: -15px; }
@@ -817,93 +817,6 @@ a svg:hover {
 
 .data h4 {
   color: #03f2ae; }
-
-.nav span {
-  display: none; }
-
-.menu {
-  fill: #03f2ae;
-  float: right;
-  display: inline-block;
-  margin-top: 30px;
-  width: 30px;
-  -webkit-transition: all 0.8s; }
-
-.menu:hover {
-  fill: white; }
-
-.wrapmenu {
-  max-width: 90%;
-  margin-left: auto;
-  margin-right: auto; }
-
-.wrapmenu:after {
-  content: " ";
-  display: block;
-  clear: both; }
-
-.menuscreen {
-  display: none;
-  z-index: 2;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: white; }
-
-.hamb {
-  padding: 0px;
-  position: float;
-  margin-top: 30vh; }
-
-.hamb li {
-  list-style-type: none;
-  padding-bottom: 30px;
-  text-align: center; }
-
-.hamb a:hover {
-  color: black; }
-
-.hamb li a {
-  border-bottom: solid 3px;
-  color: #3030ef;
-  text-decoration: none;
-  font-size: 30px; }
-
-.cross {
-  fill: blue;
-  position: absolute;
-  right: 4.3%;
-  top: 0px; }
-
-.cross:hover {
-  fill: black; }
-
-.logo2 {
-  display: none;
-  fill: blue;
-  position: absolute;
-  top: 0px; }
-
-.logo2:hover {
-  fill: black; }
-
-.importante {
-  font-family: "HKGroteskBold";
-  text-decoration: none;
-  color: #03f2ae; }
-
-.importante:hover {
-  color: white; }
-
-.center {
-  width: 49.15254%;
-  margin-left: 25.42373%; }
-
-.center img {
-  margin-top: 0;
-  padding-top: 0; }
 
 #white {
   background-color: white;
