@@ -570,14 +570,13 @@ body {
   margin-bottom: 3vw;
   width: 100%;
   color: #3030ef;
-  display: inline-block;
-  transition: all 0.3s ease-out; }
+  display: inline-block; }
 
 .grid-item img {
   cursor: url("/media/arrow.png"), auto;
-  transition: all 0.3s ease-out; }
+  -webkit-transition: all 0.3s ease-out; }
 
-.grid-item:hover a img {
+.grid-item:hover img {
   margin-top: -5px; }
 
 .grid-item:hover h4 a {
