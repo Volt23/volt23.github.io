@@ -634,6 +634,7 @@ body#index {
   text-decoration: none; }
 
 .dida {
+  position: relative;
   color: white;
   margin-top: 2vh;
   margin-bottom: 4vh; }
