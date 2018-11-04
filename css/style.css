@@ -474,7 +474,7 @@ template {
     width: 100% !important;
     margin-bottom: 1.2vw !important; }
   .masonry__gutter {
-    width: 1.6% !important; }
+    width: 1vw !important; }
   .masonry__column {
     width: 49.15254% !important; }
   .last {
@@ -512,7 +512,7 @@ template {
     width: 49.15254% !important;
     margin-bottom: 1.2vw !important; }
   .masonry__gutter {
-    width: 1.6% !important; }
+    width: 1vw !important; }
   .masonry__column {
     width: 49.15254% !important; } }
 

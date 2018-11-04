@@ -11,8 +11,6 @@ $(document).ready(function(){
 $(window).load(function(){
     var $container = $('.portfolioContainer');
     $container.isotope({
-        itemSelector: '.grid-item',
-        percentPosition: true,
         masonry: {
         columnWidth: '.masonry__column',
         gutter: '.masonry__gutter',
