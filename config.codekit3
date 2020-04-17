@@ -4384,13 +4384,6 @@
 		"opt": 0,
 		"q": 100
 		},
-	"\/media\/m900\/religione.psd": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/media\/m900\/religione.psd",
-		"oF": 0
-		},
 	"\/media\/m900\/religione2.jpg": {
 		"ft": 16384,
 		"iS": 178552,
@@ -4401,13 +4394,6 @@
 		"oIPL": 0,
 		"opt": 0,
 		"q": 100
-		},
-	"\/media\/m900\/religione2.psd": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/media\/m900\/religione2.psd",
-		"oF": 0
 		},
 	"\/media\/m900\/religione3.jpg": {
 		"ft": 16384,
@@ -4452,13 +4438,6 @@
 		"oAP": "\/media\/m900\/roto_beta.mp4",
 		"oF": 0
 		},
-	"\/media\/m900\/rotocalco.psd": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/media\/m900\/rotocalco.psd",
-		"oF": 0
-		},
 	"\/media\/m900\/univ.png": {
 		"ft": 32768,
 		"iS": 220526,
@@ -4469,13 +4448,6 @@
 		"opt": 0,
 		"oT": 1,
 		"q": 100
-		},
-	"\/media\/m900\/univ2.psd": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/media\/m900\/univ2.psd",
-		"oF": 0
 		},
 	"\/media\/mimoto.jpg": {
 		"ft": 16384,
