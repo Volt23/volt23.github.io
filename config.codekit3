@@ -4359,7 +4359,7 @@
 		"oAP": "\/media\/m900\/1.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/media\/m900\/displacement.png": {
@@ -4448,6 +4448,13 @@
 		"opt": 0,
 		"oT": 1,
 		"q": 100
+		},
+	"\/media\/m900\/video_religione.mp4": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/media\/m900\/video_religione.mp4",
+		"oF": 0
 		},
 	"\/media\/mimoto.jpg": {
 		"ft": 16384,
