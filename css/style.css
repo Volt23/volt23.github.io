@@ -402,46 +402,6 @@ template {
 [hidden] {
   display: none; }
 
-.dropbtn {
-  background-color: #4CAF50;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer; }
-
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-  position: relative;
-  display: inline-block; }
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); }
-
-/* Links inside the dropdown */
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block; }
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {
-  background-color: #f1f1f1; }
-
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-  display: block; }
-
-/* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {
-  background-color: #3e8e41; }
-
 *, *:before, *:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -458,17 +418,17 @@ template {
 
 @media all and (min-width: 40.625em) {
   footer {
-    width: 74.57627%;
+    width: 74.5762711864%;
     float: left;
-    margin-left: 12.71186%; }
+    margin-left: 12.7118644068%; }
   .content {
-    width: 74.57627%;
+    width: 74.5762711864%;
     float: left;
-    margin-left: 12.71186% !important; }
+    margin-left: 12.7118644068% !important; }
   .nav {
-    width: 74.57627%;
+    width: 74.5762711864%;
     float: left;
-    margin-left: 12.71186% !important;
+    margin-left: 12.7118644068% !important;
     margin-top: 25px; }
   .grid-item {
     width: 100% !important;
@@ -476,62 +436,58 @@ template {
   .masonry__gutter {
     width: 1vw !important; }
   .masonry__column {
-    width: 49.15254% !important; }
+    width: 49.1525423729% !important; }
   .last {
     margin-right: 0px !important; } }
 
 @media all and (min-width: 68.75em) {
   .content {
-    width: 66.10169%;
+    width: 66.1016949153%;
     float: left;
-    margin-left: 16.94915% !important;
+    margin-left: 16.9491525424% !important;
     margin-top: 4vh !important; }
   .nav {
-    width: 66.10169%;
+    width: 66.1016949153%;
     float: left;
-    margin-left: 16.94915% !important;
+    margin-left: 16.9491525424% !important;
     margin-top: 4vh !important; }
   .dida {
     font-size: 1rem;
     line-height: 1.4; } }
-
-@media all and (min-width: 68.75em) and (min-width: 650px) {
-  .dida {
-    font-size: 1rem;
-    line-height: 1.4; } }
-
-@media all and (min-width: 68.75em) and (min-width: 1100px) {
-  .dida {
-    font-size: 0.78261rem;
-    line-height: 1.4; } }
+  @media all and (min-width: 68.75em) and (min-width: 650px) {
+    .dida {
+      font-size: 1rem;
+      line-height: 1.4; } }
+  @media all and (min-width: 68.75em) and (min-width: 1100px) {
+    .dida {
+      font-size: 0.7826086957rem;
+      line-height: 1.4; } }
 
 @media all and (min-width: 68.75em) {
   .portfolioContainer {
     margin-top: 10vh !important; }
   .grid-item {
-    width: 49.15254% !important;
+    width: 49.1525423729% !important;
     margin-bottom: 1.2vw !important; }
   .masonry__gutter {
     width: 1vw !important; }
   .masonry__column {
-    width: 49.15254% !important; } }
+    width: 49.1525423729% !important; } }
 
 html {
   font-size: 100%;
   line-height: 1.4;
-  font-family: "HKGroteskLight";
+  font-family: "HKGroteskLight", sans-serif;
   height: 100%;
   width: 100%; }
-
-@media all and (min-width: 650px) {
-  html {
-    font-size: 112.5%;
-    line-height: 1.4; } }
-
-@media all and (min-width: 1100px) {
-  html {
-    font-size: 143.75%;
-    line-height: 1.4; } }
+  @media all and (min-width: 650px) {
+    html {
+      font-size: 112.5%;
+      line-height: 1.4; } }
+  @media all and (min-width: 1100px) {
+    html {
+      font-size: 143.75%;
+      line-height: 1.4; } }
 
 canvas {
   position: absolute;
@@ -560,22 +516,20 @@ body {
   margin-left: auto;
   margin-right: auto;
   margin-top: 5vh; }
-
-.portfolioContainer:after {
-  content: " ";
-  display: block;
-  clear: both; }
+  .portfolioContainer:after {
+    content: " ";
+    display: block;
+    clear: both; }
 
 .grid-item {
   margin-bottom: 3vw;
   width: 100%;
   color: #3030ef;
   display: inline-block; }
-
-.grid-item img {
-  cursor: url("/media/arrow.png"), auto;
-  -webkit-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out; }
+  .grid-item img {
+    cursor: url("/media/arrow.png"), auto;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out; }
 
 div.grid-item:hover img {
   transform: translateY(-10px); }
@@ -607,16 +561,15 @@ body#index {
   margin-right: auto;
   margin-top: 3vh;
   height: calc(100vh+100px);
-  font-family: "HKGroteskLight"; }
-
-.content:after {
-  content: " ";
-  display: block;
-  clear: both; }
+  font-family: "HKGroteskLight", sans-serif; }
+  .content:after {
+    content: " ";
+    display: block;
+    clear: both; }
 
 .button {
   display: block;
-  width: 32.20339%;
+  width: 32.2033898305%;
   text-align: center;
   margin-top: 50px;
   margin-bottom: 30px;
@@ -638,17 +591,15 @@ body#index {
   color: white;
   margin-top: 2vh;
   margin-bottom: 4vh; }
-
-.dida h4, .dida p {
-  margin: 0px;
-  padding: 0px;
-  -webkit-transition: all 0.8s; }
-
-.dida h4 span, .dida p span {
-  position: absolute;
-  color: #03f2ae;
-  right: 0;
-  text-align: right !important; }
+  .dida h4, .dida p {
+    margin: 0px;
+    padding: 0px;
+    -webkit-transition: all 0.8s; }
+    .dida h4 span, .dida p span {
+      position: absolute;
+      color: #03f2ae;
+      right: 0;
+      text-align: right !important; }
 
 a {
   color: white;
@@ -662,26 +613,22 @@ a:hover {
 body#week {
   background-color: white;
   color: #3030ef; }
-
-body#week .placeholder {
-  background-color: #3030ef; }
+  body#week .placeholder {
+    background-color: #3030ef; }
 
 .header {
   border-bottom: 1px solid;
   margin-bottom: 30px; }
-
-.header p {
-  font-size: 1rem;
-  line-height: 1.4;
-  margin-bottom: 30px; }
-
-@media all and (min-width: 650px) {
   .header p {
-    font-size: 1.11111rem; } }
-
-@media all and (min-width: 1100px) {
-  .header p {
-    font-size: 1rem; } }
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-bottom: 30px; }
+    @media all and (min-width: 650px) {
+      .header p {
+        font-size: 1.1111111111rem; } }
+    @media all and (min-width: 1100px) {
+      .header p {
+        font-size: 1rem; } }
 
 .nav {
   max-width: 90%;
@@ -689,23 +636,19 @@ body#week .placeholder {
   margin-right: auto;
   margin-top: 2vh;
   padding: 0; }
-
-.nav:after {
-  content: " ";
-  display: block;
-  clear: both; }
-
-.nav a {
-  color: #03f2ae;
-  text-decoration: none;
-  font-weight: bold; }
-
-.nav a:hover {
-  color: white; }
-
-.nav li {
-  display: inline-block;
-  margin-top: 8px; }
+  .nav:after {
+    content: " ";
+    display: block;
+    clear: both; }
+  .nav a {
+    color: #03f2ae;
+    text-decoration: none;
+    font-weight: bold; }
+  .nav a:hover {
+    color: white; }
+  .nav li {
+    display: inline-block;
+    margin-top: 8px; }
 
 .nav .menu {
   display: none; }
@@ -732,14 +675,12 @@ body#week .placeholder {
   float: right;
   text-align: right;
   margin-top: -30px; }
-
-@media all and (min-width: 650px) {
-  .didasc {
-    font-size: 0.83333rem; } }
-
-@media all and (min-width: 1100px) {
-  .didasc {
-    font-size: 0.78261rem; } }
+  @media all and (min-width: 650px) {
+    .didasc {
+      font-size: 0.8333333333rem; } }
+  @media all and (min-width: 1100px) {
+    .didasc {
+      font-size: 0.7826086957rem; } }
 
 .placeholder {
   background-color: white;
@@ -749,12 +690,11 @@ body#week .placeholder {
 footer {
   height: 12vw;
   margin-top: 1vw;
-  width: 74.57627%;
+  width: 74.5762711864%;
   float: left;
-  margin-left: 12.71186%; }
-
-footer h5 {
-  text-align: center; }
+  margin-left: 12.7118644068%; }
+  footer h5 {
+    text-align: center; }
 
 .intro {
   margin-top: -15px; }
@@ -783,14 +723,12 @@ a svg:hover {
 .article p {
   font-size: 0.8125rem;
   line-height: 1.4; }
-
-@media all and (min-width: 650px) {
-  .article p {
-    font-size: 0.88889rem; } }
-
-@media all and (min-width: 1100px) {
-  .article p {
-    font-size: 0.86957rem; } }
+  @media all and (min-width: 650px) {
+    .article p {
+      font-size: 0.8888888889rem; } }
+  @media all and (min-width: 1100px) {
+    .article p {
+      font-size: 0.8695652174rem; } }
 
 .article h2, .article h4 {
   margin: 0px;
@@ -815,58 +753,42 @@ a svg:hover {
   display: block;
   margin-top: 10px;
   padding: 0; }
-
-.data h4 {
-  color: #03f2ae; }
+  .data h4 {
+    color: #03f2ae; }
 
 #white {
   background-color: white;
   color: #3030ef; }
-
-#white a {
-  color: #03f2ae; }
-
-#white a:hover {
-  color: black; }
-
-#white .logo {
-  fill: #3030ef; }
-
-#white .logo:hover {
-  fill: #03f2ae; }
-
-#white .menu {
-  fill: #3030ef; }
-
-#white .menu:hover {
-  fill: #03f2ae; }
-
-#white .menuscreen {
-  background-color: #3030ef; }
-
-#white .menuscreen a {
-  color: white; }
-
-#white .menuscreen a:hover {
-  color: #03f2ae; }
-
-#white .menuscreen .logo {
-  fill: white; }
-
-#white .menuscreen .menu {
-  fill: white; }
-
-#white .menuscreen .logo:hover {
-  fill: #03f2ae; }
-
-#white .menuscreen .menu:hover {
-  fill: #03f2ae; }
-
-#white .nav a {
-  color: #3030ef; }
-
-#white .nav a:hover {
-  color: #03f2ae; }
+  #white a {
+    color: #03f2ae; }
+  #white a:hover {
+    color: black; }
+  #white .logo {
+    fill: #3030ef; }
+  #white .logo:hover {
+    fill: #03f2ae; }
+  #white .menu {
+    fill: #3030ef; }
+  #white .menu:hover {
+    fill: #03f2ae; }
+  #white .menuscreen {
+    background-color: #3030ef; }
+    #white .menuscreen a {
+      color: white; }
+    #white .menuscreen a:hover {
+      color: #03f2ae; }
+    #white .menuscreen .logo {
+      fill: white; }
+    #white .menuscreen .menu {
+      fill: white; }
+    #white .menuscreen .logo:hover {
+      fill: #03f2ae; }
+    #white .menuscreen .menu:hover {
+      fill: #03f2ae; }
+  #white .nav a {
+    color: #3030ef; }
+  #white .nav a:hover {
+    color: #03f2ae; }
 
 #footer {
   font-size: 0.625rem;
@@ -876,11 +798,9 @@ a svg:hover {
   z-index: 10;
   height: 5em;
   margin-top: -3em; }
-
-@media all and (min-width: 650px) {
-  #footer {
-    font-size: 0.72222rem; } }
-
-@media all and (min-width: 1100px) {
-  #footer {
-    font-size: 0.69565rem; } }
+  @media all and (min-width: 650px) {
+    #footer {
+      font-size: 0.7222222222rem; } }
+  @media all and (min-width: 1100px) {
+    #footer {
+      font-size: 0.6956521739rem; } }
