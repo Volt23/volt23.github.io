@@ -596,10 +596,7 @@ body#index {
     padding: 0px;
     -webkit-transition: all 0.8s; }
     .dida h4 span, .dida p span {
-      position: absolute;
-      color: #03f2ae;
-      right: 0;
-      text-align: right !important; }
+      color: #03f2ae; }
 
 a {
   color: white;
